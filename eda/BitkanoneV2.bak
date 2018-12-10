@@ -190,18 +190,16 @@ Text Label 9350 4000 0    50   ~ 0
 TLeft
 Text Label 9350 3300 0    50   ~ 0
 TBottom
-Text Label 5450 4900 0    50   ~ 0
+Text Label 5450 4100 0    50   ~ 0
 TTop
-Text Label 5450 5000 0    50   ~ 0
+Text Label 3450 4000 2    50   ~ 0
 TRight
-Text Label 5450 4800 0    50   ~ 0
+Text Label 5450 5000 0    50   ~ 0
 TLeft
 Text Label 5450 4600 0    50   ~ 0
 TBottom
 Wire Wire Line
 	5300 5000 5450 5000
-Wire Wire Line
-	5300 4800 5450 4800
 Wire Wire Line
 	5300 4600 5450 4600
 $Comp
@@ -347,7 +345,7 @@ Connection ~ 7900 2250
 Wire Wire Line
 	7900 2250 7900 2300
 Wire Wire Line
-	5300 4900 5450 4900
+	5300 4100 5450 4100
 Text Notes 9000 1200 2    118  ~ 24
 Bus
 Text Label 3450 4600 2    50   ~ 0
@@ -774,16 +772,14 @@ DIN
 Text Label 3850 6800 2    50   ~ 0
 DIN
 Wire Wire Line
-	3850 6800 3950 6800
-Wire Wire Line
 	5300 4700 5450 4700
 Wire Wire Line
 	5550 6800 5650 6800
 $Comp
-L Connector_Generic:Conn_01x01 X990
+L Connector_Generic:Conn_01x01 X991
 U 1 1 5C1992BC
 P 5850 6800
-F 0 "X990" H 5930 6842 50  0000 L CNN
+F 0 "X991" H 5930 6842 50  0000 L CNN
 F 1 "Conn_01x01" H 5930 6751 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5850 6800 50  0001 C CNN
 F 3 "~" H 5850 6800 50  0001 C CNN
@@ -852,4 +848,23 @@ Wire Wire Line
 	1700 4700 1800 4700
 Wire Wire Line
 	1800 4800 1700 4800
+Text Label 9350 2000 0    50   ~ 0
+CANH
+Text Label 9350 2400 0    50   ~ 0
+CANL
+$Comp
+L Connector_Generic:Conn_01x01 X990
+U 1 1 5C129EF7
+P 3450 6800
+F 0 "X990" H 3530 6842 50  0000 L CNN
+F 1 "Conn_01x01" H 3530 6751 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3450 6800 50  0001 C CNN
+F 3 "~" H 3450 6800 50  0001 C CNN
+	1    3450 6800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 6800 3950 6800
+Wire Wire Line
+	3450 4000 3550 4000
 $EndSCHEMATC
