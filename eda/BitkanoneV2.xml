@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/fiz/eda/BitkanoneV2/eda/BitkanoneV2.sch</source>
+    <date>Mo 10 Dez 2018 16:24:35 CET</date>
+    <tool>Eeschema 5.0.1+dfsg1-3</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>BitkanoneV2</title>
+        <company>Forth Gesellschaft e.V. - Gerald Wodni</company>
+        <rev>2.0</rev>
+        <date>2018-12-08</date>
+        <source>BitkanoneV2.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/LedGrid/" tstamps="/5C0C4423/">
+      <title_block>
+        <title>BitkanoneV2</title>
+        <company>Forth Gesellschaft e.V. - Gerald Wodni</company>
+        <rev>2.0</rev>
+        <date>2018-12-08</date>
+        <source>LedGrid.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U201">
+      <value>BluePill_STM32F103C</value>
+      <footprint>BluePill_breakouts:BluePill_STM32F103C_Center_NoPROG</footprint>
+      <datasheet>www.rogerclark.net</datasheet>
+      <libsource lib="bluepill_breakouts" part="BluePill_STM32F103C_NoProg" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C99DAC3</tstamp>
+    </comp>
+    <comp ref="X201">
+      <value>5VUSB</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C99DCCD</tstamp>
+    </comp>
+    <comp ref="X231">
+      <value>Bus</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
+      <libsource lib="Bitkanone" part="Bus" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C99E419</tstamp>
+    </comp>
+    <comp ref="X232">
+      <value>Bus</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
+      <libsource lib="Bitkanone" part="Bus" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C99E581</tstamp>
+    </comp>
+    <comp ref="X233">
+      <value>Bus</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
+      <libsource lib="Bitkanone" part="Bus" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C99E637</tstamp>
+    </comp>
+    <comp ref="X234">
+      <value>Bus</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
+      <libsource lib="Bitkanone" part="Bus" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C99E712</tstamp>
+    </comp>
+    <comp ref="R222">
+      <value>1k8</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C9AB29D</tstamp>
+    </comp>
+    <comp ref="U202">
+      <value>MCP2551-I-SN</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/devicedoc/21667d.pdf</datasheet>
+      <libsource lib="Interface_CAN_LIN" part="MCP2551-I-SN" description="High-Speed CAN Transceiver, 1Mbps, 5V supply, SOIC8 package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C9ABEC1</tstamp>
+    </comp>
+    <comp ref="R221">
+      <value>1k8</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C9DD3D7</tstamp>
+    </comp>
+    <comp ref="X200">
+      <value>01x03M</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x03_Male" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CA6E171</tstamp>
+    </comp>
+    <comp ref="U301">
+      <value>10DOF</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <datasheet>http://kom.aau.dk/~jdn/edu/doc/arduino/sensors/gy80gy87gy88/gy87sch.jpg</datasheet>
+      <libsource lib="Bitkanone" part="10DOF" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CA845C0</tstamp>
+    </comp>
+    <comp ref="X401">
+      <value>MotorCon</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Bitkanone" part="MotorCon" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAB3F7B</tstamp>
+    </comp>
+    <comp ref="C401">
+      <value>220u</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CAE5DA8</tstamp>
+    </comp>
+    <comp ref="C402">
+      <value>220u</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CB1AF06</tstamp>
+    </comp>
+    <comp ref="X101">
+      <value>01x02M</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CB9EAB7</tstamp>
+    </comp>
+    <comp ref="J231">
+      <value>Jumper</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CBC10A6</tstamp>
+    </comp>
+    <comp ref="J232">
+      <value>Jumper</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CBD5171</tstamp>
+    </comp>
+    <comp ref="J233">
+      <value>Jumper</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CBDA18C</tstamp>
+    </comp>
+    <comp ref="J234">
+      <value>Jumper</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CBDF1A1</tstamp>
+    </comp>
+    <comp ref="X991">
+      <value>Conn_01x01</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C1992BC</tstamp>
+    </comp>
+    <comp ref="J211">
+      <value>JH23</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C0D4078</tstamp>
+    </comp>
+    <comp ref="J212">
+      <value>JL23</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C0E0693</tstamp>
+    </comp>
+    <comp ref="X990">
+      <value>Conn_01x01</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C129EF7</tstamp>
+    </comp>
+    <comp ref="D902">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0BA9ED</tstamp>
+    </comp>
+    <comp ref="D903">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0BAD83</tstamp>
+    </comp>
+    <comp ref="D904">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0BADCA</tstamp>
+    </comp>
+    <comp ref="D905">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0BAE11</tstamp>
+    </comp>
+    <comp ref="D906">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0BAE4E</tstamp>
+    </comp>
+    <comp ref="D907">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0BAE95</tstamp>
+    </comp>
+    <comp ref="D901">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C00F1</tstamp>
+    </comp>
+    <comp ref="D909">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C271E</tstamp>
+    </comp>
+    <comp ref="D910">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C2725</tstamp>
+    </comp>
+    <comp ref="D911">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C272C</tstamp>
+    </comp>
+    <comp ref="D912">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C2733</tstamp>
+    </comp>
+    <comp ref="D913">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C273A</tstamp>
+    </comp>
+    <comp ref="D914">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C2741</tstamp>
+    </comp>
+    <comp ref="D908">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C2759</tstamp>
+    </comp>
+    <comp ref="D916">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C3888</tstamp>
+    </comp>
+    <comp ref="D917">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C388F</tstamp>
+    </comp>
+    <comp ref="D918">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C3896</tstamp>
+    </comp>
+    <comp ref="D919">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C389D</tstamp>
+    </comp>
+    <comp ref="D920">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C38A4</tstamp>
+    </comp>
+    <comp ref="D921">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C38AB</tstamp>
+    </comp>
+    <comp ref="D915">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C38C3</tstamp>
+    </comp>
+    <comp ref="D923">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C38E5</tstamp>
+    </comp>
+    <comp ref="D924">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C38EC</tstamp>
+    </comp>
+    <comp ref="D925">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C38F3</tstamp>
+    </comp>
+    <comp ref="D926">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C38FA</tstamp>
+    </comp>
+    <comp ref="D927">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C3901</tstamp>
+    </comp>
+    <comp ref="D922">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C3920</tstamp>
+    </comp>
+    <comp ref="D930">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7994</tstamp>
+    </comp>
+    <comp ref="D931">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C799B</tstamp>
+    </comp>
+    <comp ref="D932">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C79A2</tstamp>
+    </comp>
+    <comp ref="D933">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C79A9</tstamp>
+    </comp>
+    <comp ref="D934">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C79B0</tstamp>
+    </comp>
+    <comp ref="D935">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C79B7</tstamp>
+    </comp>
+    <comp ref="D929">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C79CF</tstamp>
+    </comp>
+    <comp ref="D937">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C79F1</tstamp>
+    </comp>
+    <comp ref="D938">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C79F8</tstamp>
+    </comp>
+    <comp ref="D939">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C79FF</tstamp>
+    </comp>
+    <comp ref="D940">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A06</tstamp>
+    </comp>
+    <comp ref="D941">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A0D</tstamp>
+    </comp>
+    <comp ref="D942">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A14</tstamp>
+    </comp>
+    <comp ref="D936">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A2C</tstamp>
+    </comp>
+    <comp ref="D944">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A4E</tstamp>
+    </comp>
+    <comp ref="D945">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A55</tstamp>
+    </comp>
+    <comp ref="D946">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A5C</tstamp>
+    </comp>
+    <comp ref="D947">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A63</tstamp>
+    </comp>
+    <comp ref="D948">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A6A</tstamp>
+    </comp>
+    <comp ref="D949">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A71</tstamp>
+    </comp>
+    <comp ref="D943">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C7A89</tstamp>
+    </comp>
+    <comp ref="D928">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0C3908</tstamp>
+    </comp>
+    <comp ref="C907">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C4545D6</tstamp>
+    </comp>
+    <comp ref="C906">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C515B1A</tstamp>
+    </comp>
+    <comp ref="C905">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C521B5D</tstamp>
+    </comp>
+    <comp ref="C904">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C52DBA8</tstamp>
+    </comp>
+    <comp ref="C903">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C539D3E</tstamp>
+    </comp>
+    <comp ref="C902">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C539D51</tstamp>
+    </comp>
+    <comp ref="C901">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C539D64</tstamp>
+    </comp>
+    <comp ref="C914">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C680C04</tstamp>
+    </comp>
+    <comp ref="C913">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C680C11</tstamp>
+    </comp>
+    <comp ref="C912">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C680C18</tstamp>
+    </comp>
+    <comp ref="C911">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C680C1F</tstamp>
+    </comp>
+    <comp ref="C910">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C680C26</tstamp>
+    </comp>
+    <comp ref="C909">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C680C2D</tstamp>
+    </comp>
+    <comp ref="C908">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C680C34</tstamp>
+    </comp>
+    <comp ref="C921">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C69554C</tstamp>
+    </comp>
+    <comp ref="C920">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C695559</tstamp>
+    </comp>
+    <comp ref="C919">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C695560</tstamp>
+    </comp>
+    <comp ref="C918">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C695567</tstamp>
+    </comp>
+    <comp ref="C917">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C69556E</tstamp>
+    </comp>
+    <comp ref="C916">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C695575</tstamp>
+    </comp>
+    <comp ref="C915">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C69557C</tstamp>
+    </comp>
+    <comp ref="C928">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6955B3</tstamp>
+    </comp>
+    <comp ref="C927">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6955C0</tstamp>
+    </comp>
+    <comp ref="C926">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6955C7</tstamp>
+    </comp>
+    <comp ref="C925">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6955CE</tstamp>
+    </comp>
+    <comp ref="C924">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6955D5</tstamp>
+    </comp>
+    <comp ref="C923">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6955DC</tstamp>
+    </comp>
+    <comp ref="C922">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6955E3</tstamp>
+    </comp>
+    <comp ref="C935">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B47D1</tstamp>
+    </comp>
+    <comp ref="C934">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B47DE</tstamp>
+    </comp>
+    <comp ref="C933">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B47E5</tstamp>
+    </comp>
+    <comp ref="C932">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B47EC</tstamp>
+    </comp>
+    <comp ref="C931">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B47F3</tstamp>
+    </comp>
+    <comp ref="C930">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B47FA</tstamp>
+    </comp>
+    <comp ref="C929">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B4801</tstamp>
+    </comp>
+    <comp ref="C942">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B4838</tstamp>
+    </comp>
+    <comp ref="C941">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B4845</tstamp>
+    </comp>
+    <comp ref="C940">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B484C</tstamp>
+    </comp>
+    <comp ref="C939">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B4853</tstamp>
+    </comp>
+    <comp ref="C938">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B485A</tstamp>
+    </comp>
+    <comp ref="C937">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B4861</tstamp>
+    </comp>
+    <comp ref="C936">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B4868</tstamp>
+    </comp>
+    <comp ref="C949">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B489F</tstamp>
+    </comp>
+    <comp ref="C948">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B48AC</tstamp>
+    </comp>
+    <comp ref="C947">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B48B3</tstamp>
+    </comp>
+    <comp ref="C946">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B48BA</tstamp>
+    </comp>
+    <comp ref="C945">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B48C1</tstamp>
+    </comp>
+    <comp ref="C944">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B48C8</tstamp>
+    </comp>
+    <comp ref="C943">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C6B48CF</tstamp>
+    </comp>
+    <comp ref="C900">
+      <value>220u</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/LedGrid/" tstamps="/5C0C4423/"/>
+      <tstamp>5C0F0F9D</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Bitkanone" part="10DOF">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">10DOF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="3.3V" type="power_out"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="SCL" type="BiDi"/>
+        <pin num="5" name="SDA" type="BiDi"/>
+        <pin num="6" name="FSYNC" type="input"/>
+        <pin num="7" name="INTA" type="BiDi"/>
+        <pin num="8" name="DRDY" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Bitkanone" part="Bus">
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">Bus</field>
+      </fields>
+      <pins>
+        <pin num="1" name="5V" type="input"/>
+        <pin num="2" name="CANH" type="input"/>
+        <pin num="3" name="CANL" type="input"/>
+        <pin num="4" name="TOPO" type="input"/>
+        <pin num="5" name="GND" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Bitkanone" part="MotorCon">
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">MotorCon</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND1" type="power_in"/>
+        <pin num="2" name="VCC1" type="power_in"/>
+        <pin num="3" name="PWM1" type="input"/>
+        <pin num="4" name="EN1" type="input"/>
+        <pin num="5" name="GND2" type="power_in"/>
+        <pin num="6" name="VCC2" type="power_in"/>
+        <pin num="7" name="PWM2" type="input"/>
+        <pin num="8" name="EN2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x02_Male">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x03_Male">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x01">
+      <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Jumper_NC_Small">
+      <description>Jumper, normally closed, small symbol</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_NC_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_CAN_LIN" part="MCP2551-I-SN">
+      <description>High-Speed CAN Transceiver, 1Mbps, 5V supply, SOIC8 package</description>
+      <docs>http://ww1.microchip.com/downloads/en/devicedoc/21667d.pdf</docs>
+      <footprints>
+        <fp>SOIC*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP2551-I-SN</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TXD" type="input"/>
+        <pin num="2" name="VSS" type="power_in"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="RXD" type="output"/>
+        <pin num="5" name="Vref" type="power_out"/>
+        <pin num="6" name="CANL" type="BiDi"/>
+        <pin num="7" name="CANH" type="BiDi"/>
+        <pin num="8" name="Rs" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_3_Open">
+      <description>Solder Jumper, 3-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Open*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_3_Open</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="input"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LED" part="WS2812B">
+      <description>RGB LED with integrated controller</description>
+      <docs>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</docs>
+      <footprints>
+        <fp>LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">WS2812B</field>
+        <field name="Footprint">LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="DOUT" type="output"/>
+        <pin num="3" name="VSS" type="power_in"/>
+        <pin num="4" name="DIN" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="bluepill_breakouts" part="BluePill_STM32F103C_NoProg">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BluePill_STM32F103C_NoProg</field>
+        <field name="Footprint">BluePill_breakouts:BluePill_STM32F103C</field>
+        <field name="Datasheet">www.rogerclark.net</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBAT" type="power_in"/>
+        <pin num="2" name="PC13_LED" type="BiDi"/>
+        <pin num="3" name="PC14" type="BiDi"/>
+        <pin num="4" name="PC15" type="BiDi"/>
+        <pin num="5" name="PA0" type="BiDi"/>
+        <pin num="6" name="PA1" type="BiDi"/>
+        <pin num="7" name="PA2_TX2" type="BiDi"/>
+        <pin num="8" name="PA3_RX2" type="BiDi"/>
+        <pin num="9" name="PA4" type="BiDi"/>
+        <pin num="10" name="PA5_SCK1" type="BiDi"/>
+        <pin num="11" name="PA6_MISO1" type="BiDi"/>
+        <pin num="12" name="PA7_MOSI1" type="BiDi"/>
+        <pin num="13" name="PB0" type="BiDi"/>
+        <pin num="14" name="PB1" type="BiDi"/>
+        <pin num="15" name="PB10_SCL2" type="BiDi"/>
+        <pin num="16" name="PB11_SDA2" type="BiDi"/>
+        <pin num="17" name="NRST" type="input"/>
+        <pin num="18" name="VCC3V3" type="BiDi"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="PB12" type="BiDi"/>
+        <pin num="22" name="PB13_SCK2" type="BiDi"/>
+        <pin num="23" name="PB14_MISO2" type="BiDi"/>
+        <pin num="24" name="PB15_MOSI2" type="BiDi"/>
+        <pin num="25" name="PA8" type="BiDi"/>
+        <pin num="26" name="PA9_TX1" type="BiDi"/>
+        <pin num="27" name="PA10_RX1" type="BiDi"/>
+        <pin num="28" name="PA11_USB_D-" type="BiDi"/>
+        <pin num="29" name="PA12_USBD+" type="BiDi"/>
+        <pin num="30" name="PA15" type="BiDi"/>
+        <pin num="31" name="PB3" type="BiDi"/>
+        <pin num="32" name="PB4" type="BiDi"/>
+        <pin num="33" name="PB5" type="BiDi"/>
+        <pin num="34" name="PB6_SCL1" type="BiDi"/>
+        <pin num="35" name="PB7_SDA1" type="BiDi"/>
+        <pin num="36" name="PB8" type="BiDi"/>
+        <pin num="37" name="PB9" type="BiDi"/>
+        <pin num="38" name="5V_USB" type="BiDi"/>
+        <pin num="39" name="GND" type="power_in"/>
+        <pin num="40" name="VCC3V3" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Bitkanone">
+      <uri>/home/fiz/eda/BitkanoneV2/eda/libraries/Bitkanone.lib</uri>
+    </library>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="Interface_CAN_LIN">
+      <uri>/usr/share/kicad/library/Interface_CAN_LIN.lib</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>/usr/share/kicad/library/Jumper.lib</uri>
+    </library>
+    <library logical="LED">
+      <uri>/usr/share/kicad/library/LED.lib</uri>
+    </library>
+    <library logical="bluepill_breakouts">
+      <uri>/home/fiz/eda/BitkanoneV2/eda/libraries/bluepill_breakouts.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/PWM2">
+      <node ref="X401" pin="7"/>
+      <node ref="U201" pin="7"/>
+    </net>
+    <net code="2" name="/EN1">
+      <node ref="X401" pin="4"/>
+      <node ref="U201" pin="6"/>
+    </net>
+    <net code="3" name="/PWM1">
+      <node ref="X401" pin="3"/>
+      <node ref="U201" pin="5"/>
+    </net>
+    <net code="4" name="/EN2">
+      <node ref="U201" pin="8"/>
+      <node ref="X401" pin="8"/>
+    </net>
+    <net code="5" name="+5V">
+      <node ref="C900" pin="1"/>
+      <node ref="C938" pin="1"/>
+      <node ref="C949" pin="1"/>
+      <node ref="C948" pin="1"/>
+      <node ref="C947" pin="1"/>
+      <node ref="C946" pin="1"/>
+      <node ref="C944" pin="1"/>
+      <node ref="C943" pin="1"/>
+      <node ref="C942" pin="1"/>
+      <node ref="C941" pin="1"/>
+      <node ref="C940" pin="1"/>
+      <node ref="C939" pin="1"/>
+      <node ref="C934" pin="1"/>
+      <node ref="C930" pin="1"/>
+      <node ref="C935" pin="1"/>
+      <node ref="C933" pin="1"/>
+      <node ref="C932" pin="1"/>
+      <node ref="C931" pin="1"/>
+      <node ref="C929" pin="1"/>
+      <node ref="C923" pin="1"/>
+      <node ref="C922" pin="1"/>
+      <node ref="C924" pin="1"/>
+      <node ref="C904" pin="1"/>
+      <node ref="C928" pin="1"/>
+      <node ref="C927" pin="1"/>
+      <node ref="C926" pin="1"/>
+      <node ref="C925" pin="1"/>
+      <node ref="C914" pin="1"/>
+      <node ref="C945" pin="1"/>
+      <node ref="C912" pin="1"/>
+      <node ref="C903" pin="1"/>
+      <node ref="C902" pin="1"/>
+      <node ref="C901" pin="1"/>
+      <node ref="C907" pin="1"/>
+      <node ref="C906" pin="1"/>
+      <node ref="C905" pin="1"/>
+      <node ref="C911" pin="1"/>
+      <node ref="C910" pin="1"/>
+      <node ref="C909" pin="1"/>
+      <node ref="C908" pin="1"/>
+      <node ref="C913" pin="1"/>
+      <node ref="D947" pin="1"/>
+      <node ref="D948" pin="1"/>
+      <node ref="D943" pin="1"/>
+      <node ref="D946" pin="1"/>
+      <node ref="D912" pin="1"/>
+      <node ref="D909" pin="1"/>
+      <node ref="D910" pin="1"/>
+      <node ref="D911" pin="1"/>
+      <node ref="D913" pin="1"/>
+      <node ref="D914" pin="1"/>
+      <node ref="D928" pin="1"/>
+      <node ref="D949" pin="1"/>
+      <node ref="D933" pin="1"/>
+      <node ref="D934" pin="1"/>
+      <node ref="D929" pin="1"/>
+      <node ref="D932" pin="1"/>
+      <node ref="D944" pin="1"/>
+      <node ref="D945" pin="1"/>
+      <node ref="D942" pin="1"/>
+      <node ref="D939" pin="1"/>
+      <node ref="D940" pin="1"/>
+      <node ref="D941" pin="1"/>
+      <node ref="D936" pin="1"/>
+      <node ref="D937" pin="1"/>
+      <node ref="D938" pin="1"/>
+      <node ref="D935" pin="1"/>
+      <node ref="D919" pin="1"/>
+      <node ref="D915" pin="1"/>
+      <node ref="D916" pin="1"/>
+      <node ref="D917" pin="1"/>
+      <node ref="D918" pin="1"/>
+      <node ref="D920" pin="1"/>
+      <node ref="D921" pin="1"/>
+      <node ref="C936" pin="1"/>
+      <node ref="D902" pin="1"/>
+      <node ref="D903" pin="1"/>
+      <node ref="D904" pin="1"/>
+      <node ref="D905" pin="1"/>
+      <node ref="D906" pin="1"/>
+      <node ref="D907" pin="1"/>
+      <node ref="D908" pin="1"/>
+      <node ref="D925" pin="1"/>
+      <node ref="D930" pin="1"/>
+      <node ref="D931" pin="1"/>
+      <node ref="D923" pin="1"/>
+      <node ref="D924" pin="1"/>
+      <node ref="C937" pin="1"/>
+      <node ref="D926" pin="1"/>
+      <node ref="D927" pin="1"/>
+      <node ref="D922" pin="1"/>
+      <node ref="D901" pin="1"/>
+      <node ref="C915" pin="1"/>
+      <node ref="C916" pin="1"/>
+      <node ref="C917" pin="1"/>
+      <node ref="C918" pin="1"/>
+      <node ref="C919" pin="1"/>
+      <node ref="X401" pin="2"/>
+      <node ref="C920" pin="1"/>
+      <node ref="J234" pin="1"/>
+      <node ref="C401" pin="1"/>
+      <node ref="C921" pin="1"/>
+      <node ref="C402" pin="1"/>
+      <node ref="J233" pin="1"/>
+      <node ref="X201" pin="2"/>
+      <node ref="X401" pin="6"/>
+      <node ref="J231" pin="1"/>
+      <node ref="J232" pin="1"/>
+      <node ref="X101" pin="2"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="D920" pin="3"/>
+      <node ref="D919" pin="3"/>
+      <node ref="D918" pin="3"/>
+      <node ref="D917" pin="3"/>
+      <node ref="D921" pin="3"/>
+      <node ref="D916" pin="3"/>
+      <node ref="D901" pin="3"/>
+      <node ref="D927" pin="3"/>
+      <node ref="D926" pin="3"/>
+      <node ref="D925" pin="3"/>
+      <node ref="D924" pin="3"/>
+      <node ref="D923" pin="3"/>
+      <node ref="D902" pin="3"/>
+      <node ref="D930" pin="3"/>
+      <node ref="D922" pin="3"/>
+      <node ref="C940" pin="2"/>
+      <node ref="U201" pin="20"/>
+      <node ref="U201" pin="19"/>
+      <node ref="C937" pin="2"/>
+      <node ref="X231" pin="5"/>
+      <node ref="C942" pin="2"/>
+      <node ref="C941" pin="2"/>
+      <node ref="C939" pin="2"/>
+      <node ref="C938" pin="2"/>
+      <node ref="C936" pin="2"/>
+      <node ref="D915" pin="3"/>
+      <node ref="X233" pin="5"/>
+      <node ref="X234" pin="5"/>
+      <node ref="X232" pin="5"/>
+      <node ref="X401" pin="1"/>
+      <node ref="D945" pin="3"/>
+      <node ref="X101" pin="1"/>
+      <node ref="D944" pin="3"/>
+      <node ref="D939" pin="3"/>
+      <node ref="D940" pin="3"/>
+      <node ref="D941" pin="3"/>
+      <node ref="D942" pin="3"/>
+      <node ref="D936" pin="3"/>
+      <node ref="D929" pin="3"/>
+      <node ref="D935" pin="3"/>
+      <node ref="D938" pin="3"/>
+      <node ref="D934" pin="3"/>
+      <node ref="D933" pin="3"/>
+      <node ref="D932" pin="3"/>
+      <node ref="D937" pin="3"/>
+      <node ref="D909" pin="3"/>
+      <node ref="D910" pin="3"/>
+      <node ref="D911" pin="3"/>
+      <node ref="D931" pin="3"/>
+      <node ref="D912" pin="3"/>
+      <node ref="D913" pin="3"/>
+      <node ref="D914" pin="3"/>
+      <node ref="D908" pin="3"/>
+      <node ref="D907" pin="3"/>
+      <node ref="D906" pin="3"/>
+      <node ref="D905" pin="3"/>
+      <node ref="D904" pin="3"/>
+      <node ref="C402" pin="2"/>
+      <node ref="C401" pin="2"/>
+      <node ref="D903" pin="3"/>
+      <node ref="X401" pin="5"/>
+      <node ref="D943" pin="3"/>
+      <node ref="D949" pin="3"/>
+      <node ref="D928" pin="3"/>
+      <node ref="D948" pin="3"/>
+      <node ref="D947" pin="3"/>
+      <node ref="D946" pin="3"/>
+      <node ref="U202" pin="2"/>
+      <node ref="C921" pin="2"/>
+      <node ref="C926" pin="2"/>
+      <node ref="C925" pin="2"/>
+      <node ref="C929" pin="2"/>
+      <node ref="C923" pin="2"/>
+      <node ref="C922" pin="2"/>
+      <node ref="C915" pin="2"/>
+      <node ref="C902" pin="2"/>
+      <node ref="C918" pin="2"/>
+      <node ref="C917" pin="2"/>
+      <node ref="C916" pin="2"/>
+      <node ref="C944" pin="2"/>
+      <node ref="U202" pin="8"/>
+      <node ref="C904" pin="2"/>
+      <node ref="C903" pin="2"/>
+      <node ref="C945" pin="2"/>
+      <node ref="C919" pin="2"/>
+      <node ref="C901" pin="2"/>
+      <node ref="C946" pin="2"/>
+      <node ref="C947" pin="2"/>
+      <node ref="C948" pin="2"/>
+      <node ref="X200" pin="3"/>
+      <node ref="C949" pin="2"/>
+      <node ref="C905" pin="2"/>
+      <node ref="C909" pin="2"/>
+      <node ref="C920" pin="2"/>
+      <node ref="C914" pin="2"/>
+      <node ref="C943" pin="2"/>
+      <node ref="C907" pin="2"/>
+      <node ref="U201" pin="39"/>
+      <node ref="C927" pin="2"/>
+      <node ref="C913" pin="2"/>
+      <node ref="C906" pin="2"/>
+      <node ref="C933" pin="2"/>
+      <node ref="C908" pin="2"/>
+      <node ref="C932" pin="2"/>
+      <node ref="C912" pin="2"/>
+      <node ref="C931" pin="2"/>
+      <node ref="C911" pin="2"/>
+      <node ref="C910" pin="2"/>
+      <node ref="C928" pin="2"/>
+      <node ref="C930" pin="2"/>
+      <node ref="C934" pin="2"/>
+      <node ref="C900" pin="2"/>
+      <node ref="C924" pin="2"/>
+      <node ref="C935" pin="2"/>
+      <node ref="U301" pin="3"/>
+    </net>
+    <net code="7" name="Net-(J232-Pad2)">
+      <node ref="X232" pin="1"/>
+      <node ref="J232" pin="2"/>
+    </net>
+    <net code="8" name="Net-(J231-Pad2)">
+      <node ref="X231" pin="1"/>
+      <node ref="J231" pin="2"/>
+    </net>
+    <net code="9" name="+3V3">
+      <node ref="U201" pin="18"/>
+      <node ref="U201" pin="40"/>
+      <node ref="R222" pin="1"/>
+      <node ref="U301" pin="1"/>
+      <node ref="U202" pin="3"/>
+      <node ref="R221" pin="1"/>
+    </net>
+    <net code="10" name="/SENS_SDA">
+      <node ref="U201" pin="16"/>
+      <node ref="U301" pin="5"/>
+    </net>
+    <net code="11" name="/SENS_SCL">
+      <node ref="U301" pin="4"/>
+      <node ref="U201" pin="15"/>
+    </net>
+    <net code="12" name="Net-(U301-Pad8)">
+      <node ref="U301" pin="8"/>
+    </net>
+    <net code="13" name="Net-(U301-Pad7)">
+      <node ref="U301" pin="7"/>
+    </net>
+    <net code="14" name="Net-(U301-Pad6)">
+      <node ref="U301" pin="6"/>
+    </net>
+    <net code="15" name="Net-(J212-Pad3)">
+      <node ref="U202" pin="6"/>
+      <node ref="J212" pin="3"/>
+    </net>
+    <net code="16" name="Net-(J211-Pad3)">
+      <node ref="J211" pin="3"/>
+      <node ref="U202" pin="7"/>
+    </net>
+    <net code="17" name="/LedGrid/DOUT">
+      <node ref="X991" pin="1"/>
+      <node ref="D907" pin="2"/>
+    </net>
+    <net code="18" name="/DIN">
+      <node ref="X990" pin="1"/>
+      <node ref="D943" pin="4"/>
+      <node ref="U201" pin="24"/>
+    </net>
+    <net code="19" name="Net-(U201-Pad1)">
+      <node ref="U201" pin="1"/>
+    </net>
+    <net code="20" name="/TBottom">
+      <node ref="X233" pin="4"/>
+      <node ref="U201" pin="12"/>
+    </net>
+    <net code="21" name="/TRight">
+      <node ref="X232" pin="4"/>
+      <node ref="U201" pin="10"/>
+    </net>
+    <net code="22" name="/CANL">
+      <node ref="X233" pin="3"/>
+      <node ref="X234" pin="3"/>
+      <node ref="X232" pin="3"/>
+      <node ref="X231" pin="3"/>
+      <node ref="J212" pin="2"/>
+    </net>
+    <net code="23" name="/CANH">
+      <node ref="X231" pin="2"/>
+      <node ref="X232" pin="2"/>
+      <node ref="J211" pin="2"/>
+      <node ref="X233" pin="2"/>
+      <node ref="X234" pin="2"/>
+    </net>
+    <net code="24" name="Net-(J234-Pad2)">
+      <node ref="X234" pin="1"/>
+      <node ref="J234" pin="2"/>
+    </net>
+    <net code="25" name="Net-(J233-Pad2)">
+      <node ref="X233" pin="1"/>
+      <node ref="J233" pin="2"/>
+    </net>
+    <net code="26" name="Net-(U201-Pad28)">
+      <node ref="U201" pin="28"/>
+    </net>
+    <net code="27" name="Net-(U201-Pad27)">
+      <node ref="X200" pin="2"/>
+      <node ref="U201" pin="27"/>
+    </net>
+    <net code="28" name="Net-(U201-Pad25)">
+      <node ref="U201" pin="25"/>
+    </net>
+    <net code="29" name="Net-(U201-Pad23)">
+      <node ref="U201" pin="23"/>
+    </net>
+    <net code="30" name="Net-(U201-Pad22)">
+      <node ref="U201" pin="22"/>
+    </net>
+    <net code="31" name="/TLeft">
+      <node ref="U201" pin="21"/>
+      <node ref="X234" pin="4"/>
+    </net>
+    <net code="32" name="Net-(U201-Pad2)">
+      <node ref="U201" pin="2"/>
+    </net>
+    <net code="33" name="Net-(U201-Pad29)">
+      <node ref="U201" pin="29"/>
+    </net>
+    <net code="34" name="Net-(U201-Pad17)">
+      <node ref="U201" pin="17"/>
+    </net>
+    <net code="35" name="Net-(U201-Pad14)">
+      <node ref="U201" pin="14"/>
+    </net>
+    <net code="36" name="Net-(U201-Pad13)">
+      <node ref="U201" pin="13"/>
+    </net>
+    <net code="37" name="Net-(U201-Pad11)">
+      <node ref="U201" pin="11"/>
+    </net>
+    <net code="38" name="Net-(U201-Pad38)">
+      <node ref="X201" pin="1"/>
+      <node ref="U201" pin="38"/>
+    </net>
+    <net code="39" name="Net-(U201-Pad9)">
+      <node ref="U201" pin="9"/>
+    </net>
+    <net code="40" name="Net-(U201-Pad4)">
+      <node ref="U201" pin="4"/>
+    </net>
+    <net code="41" name="Net-(U301-Pad2)">
+      <node ref="U301" pin="2"/>
+    </net>
+    <net code="42" name="/CANTX">
+      <node ref="U202" pin="1"/>
+      <node ref="J211" pin="1"/>
+      <node ref="U201" pin="37"/>
+      <node ref="R221" pin="2"/>
+    </net>
+    <net code="43" name="/CANRX">
+      <node ref="R222" pin="2"/>
+      <node ref="U202" pin="4"/>
+      <node ref="J212" pin="1"/>
+      <node ref="U201" pin="36"/>
+    </net>
+    <net code="44" name="Net-(U201-Pad35)">
+      <node ref="U201" pin="35"/>
+    </net>
+    <net code="45" name="Net-(U201-Pad34)">
+      <node ref="U201" pin="34"/>
+    </net>
+    <net code="46" name="Net-(U201-Pad33)">
+      <node ref="U201" pin="33"/>
+    </net>
+    <net code="47" name="Net-(U201-Pad32)">
+      <node ref="U201" pin="32"/>
+    </net>
+    <net code="48" name="Net-(U201-Pad31)">
+      <node ref="U201" pin="31"/>
+    </net>
+    <net code="49" name="/TTop">
+      <node ref="U201" pin="30"/>
+      <node ref="X231" pin="4"/>
+    </net>
+    <net code="50" name="Net-(U201-Pad3)">
+      <node ref="U201" pin="3"/>
+    </net>
+    <net code="51" name="Net-(U201-Pad26)">
+      <node ref="U201" pin="26"/>
+      <node ref="X200" pin="1"/>
+    </net>
+    <net code="52" name="Net-(U202-Pad5)">
+      <node ref="U202" pin="5"/>
+    </net>
+    <net code="53" name="Net-(D908-Pad4)">
+      <node ref="D921" pin="2"/>
+      <node ref="D908" pin="4"/>
+    </net>
+    <net code="54" name="Net-(D929-Pad4)">
+      <node ref="D942" pin="2"/>
+      <node ref="D929" pin="4"/>
+    </net>
+    <net code="55" name="Net-(D922-Pad4)">
+      <node ref="D922" pin="4"/>
+      <node ref="D935" pin="2"/>
+    </net>
+    <net code="56" name="Net-(D915-Pad4)">
+      <node ref="D915" pin="4"/>
+      <node ref="D928" pin="2"/>
+    </net>
+    <net code="57" name="Net-(D901-Pad4)">
+      <node ref="D901" pin="4"/>
+      <node ref="D914" pin="2"/>
+    </net>
+    <net code="58" name="Net-(D919-Pad2)">
+      <node ref="D919" pin="2"/>
+      <node ref="D920" pin="4"/>
+    </net>
+    <net code="59" name="Net-(D920-Pad2)">
+      <node ref="D921" pin="4"/>
+      <node ref="D920" pin="2"/>
+    </net>
+    <net code="60" name="Net-(D915-Pad2)">
+      <node ref="D916" pin="4"/>
+      <node ref="D915" pin="2"/>
+    </net>
+    <net code="61" name="Net-(D918-Pad2)">
+      <node ref="D918" pin="2"/>
+      <node ref="D919" pin="4"/>
+    </net>
+    <net code="62" name="Net-(D916-Pad2)">
+      <node ref="D916" pin="2"/>
+      <node ref="D917" pin="4"/>
+    </net>
+    <net code="63" name="Net-(D917-Pad2)">
+      <node ref="D917" pin="2"/>
+      <node ref="D918" pin="4"/>
+    </net>
+    <net code="64" name="Net-(D922-Pad2)">
+      <node ref="D923" pin="4"/>
+      <node ref="D922" pin="2"/>
+    </net>
+    <net code="65" name="Net-(D923-Pad2)">
+      <node ref="D924" pin="4"/>
+      <node ref="D923" pin="2"/>
+    </net>
+    <net code="66" name="Net-(D924-Pad2)">
+      <node ref="D924" pin="2"/>
+      <node ref="D925" pin="4"/>
+    </net>
+    <net code="67" name="Net-(D925-Pad2)">
+      <node ref="D925" pin="2"/>
+      <node ref="D926" pin="4"/>
+    </net>
+    <net code="68" name="Net-(D927-Pad2)">
+      <node ref="D928" pin="4"/>
+      <node ref="D927" pin="2"/>
+    </net>
+    <net code="69" name="Net-(D926-Pad2)">
+      <node ref="D926" pin="2"/>
+      <node ref="D927" pin="4"/>
+    </net>
+    <net code="70" name="Net-(D904-Pad2)">
+      <node ref="D905" pin="4"/>
+      <node ref="D904" pin="2"/>
+    </net>
+    <net code="71" name="Net-(D905-Pad2)">
+      <node ref="D905" pin="2"/>
+      <node ref="D906" pin="4"/>
+    </net>
+    <net code="72" name="Net-(D906-Pad2)">
+      <node ref="D907" pin="4"/>
+      <node ref="D906" pin="2"/>
+    </net>
+    <net code="73" name="Net-(D901-Pad2)">
+      <node ref="D902" pin="4"/>
+      <node ref="D901" pin="2"/>
+    </net>
+    <net code="74" name="Net-(D903-Pad2)">
+      <node ref="D903" pin="2"/>
+      <node ref="D904" pin="4"/>
+    </net>
+    <net code="75" name="Net-(D902-Pad2)">
+      <node ref="D902" pin="2"/>
+      <node ref="D903" pin="4"/>
+    </net>
+    <net code="76" name="Net-(D912-Pad2)">
+      <node ref="D912" pin="2"/>
+      <node ref="D913" pin="4"/>
+    </net>
+    <net code="77" name="Net-(D913-Pad2)">
+      <node ref="D914" pin="4"/>
+      <node ref="D913" pin="2"/>
+    </net>
+    <net code="78" name="Net-(D908-Pad2)">
+      <node ref="D908" pin="2"/>
+      <node ref="D909" pin="4"/>
+    </net>
+    <net code="79" name="Net-(D911-Pad2)">
+      <node ref="D912" pin="4"/>
+      <node ref="D911" pin="2"/>
+    </net>
+    <net code="80" name="Net-(D909-Pad2)">
+      <node ref="D910" pin="4"/>
+      <node ref="D909" pin="2"/>
+    </net>
+    <net code="81" name="Net-(D910-Pad2)">
+      <node ref="D910" pin="2"/>
+      <node ref="D911" pin="4"/>
+    </net>
+    <net code="82" name="Net-(D944-Pad2)">
+      <node ref="D944" pin="2"/>
+      <node ref="D945" pin="4"/>
+    </net>
+    <net code="83" name="Net-(D945-Pad2)">
+      <node ref="D946" pin="4"/>
+      <node ref="D945" pin="2"/>
+    </net>
+    <net code="84" name="Net-(D946-Pad2)">
+      <node ref="D947" pin="4"/>
+      <node ref="D946" pin="2"/>
+    </net>
+    <net code="85" name="Net-(D947-Pad2)">
+      <node ref="D948" pin="4"/>
+      <node ref="D947" pin="2"/>
+    </net>
+    <net code="86" name="Net-(D936-Pad4)">
+      <node ref="D936" pin="4"/>
+      <node ref="D949" pin="2"/>
+    </net>
+    <net code="87" name="Net-(D948-Pad2)">
+      <node ref="D948" pin="2"/>
+      <node ref="D949" pin="4"/>
+    </net>
+    <net code="88" name="Net-(D943-Pad2)">
+      <node ref="D943" pin="2"/>
+      <node ref="D944" pin="4"/>
+    </net>
+    <net code="89" name="Net-(D930-Pad2)">
+      <node ref="D930" pin="2"/>
+      <node ref="D931" pin="4"/>
+    </net>
+    <net code="90" name="Net-(D931-Pad2)">
+      <node ref="D932" pin="4"/>
+      <node ref="D931" pin="2"/>
+    </net>
+    <net code="91" name="Net-(D932-Pad2)">
+      <node ref="D933" pin="4"/>
+      <node ref="D932" pin="2"/>
+    </net>
+    <net code="92" name="Net-(D933-Pad2)">
+      <node ref="D934" pin="4"/>
+      <node ref="D933" pin="2"/>
+    </net>
+    <net code="93" name="Net-(D934-Pad2)">
+      <node ref="D935" pin="4"/>
+      <node ref="D934" pin="2"/>
+    </net>
+    <net code="94" name="Net-(D929-Pad2)">
+      <node ref="D929" pin="2"/>
+      <node ref="D930" pin="4"/>
+    </net>
+    <net code="95" name="Net-(D937-Pad2)">
+      <node ref="D938" pin="4"/>
+      <node ref="D937" pin="2"/>
+    </net>
+    <net code="96" name="Net-(D938-Pad2)">
+      <node ref="D939" pin="4"/>
+      <node ref="D938" pin="2"/>
+    </net>
+    <net code="97" name="Net-(D939-Pad2)">
+      <node ref="D940" pin="4"/>
+      <node ref="D939" pin="2"/>
+    </net>
+    <net code="98" name="Net-(D940-Pad2)">
+      <node ref="D940" pin="2"/>
+      <node ref="D941" pin="4"/>
+    </net>
+    <net code="99" name="Net-(D941-Pad2)">
+      <node ref="D942" pin="4"/>
+      <node ref="D941" pin="2"/>
+    </net>
+    <net code="100" name="Net-(D936-Pad2)">
+      <node ref="D937" pin="4"/>
+      <node ref="D936" pin="2"/>
+    </net>
+  </nets>
+</export>
