@@ -28,12 +28,12 @@ $EndComp
 $Comp
 L power:+5V #PWR0909
 U 1 1 5C99DB7A
-P 6300 2850
-F 0 "#PWR0909" H 6300 2700 50  0001 C CNN
-F 1 "+5V" H 6315 3023 50  0000 C CNN
-F 2 "" H 6300 2850 50  0001 C CNN
-F 3 "" H 6300 2850 50  0001 C CNN
-	1    6300 2850
+P 6450 2850
+F 0 "#PWR0909" H 6450 2700 50  0001 C CNN
+F 1 "+5V" H 6465 3023 50  0000 C CNN
+F 2 "" H 6450 2850 50  0001 C CNN
+F 3 "" H 6450 2850 50  0001 C CNN
+	1    6450 2850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -70,14 +70,14 @@ F 3 "" H 5950 2850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Jumper_NC_Small X201
+L Jumper:SolderJumper_2_Open X201
 U 1 1 5C99DCCD
-P 6150 3300
-F 0 "X201" H 6150 3512 50  0000 C CNN
-F 1 "5VUSB" H 6150 3421 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 6150 3300 50  0001 C CNN
-F 3 "~" H 6150 3300 50  0001 C CNN
-	1    6150 3300
+P 6250 3000
+F 0 "X201" H 6250 3212 50  0000 C CNN
+F 1 "5VUSB" H 6250 3121 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 6250 3000 50  0001 C CNN
+F 3 "~" H 6250 3000 50  0001 C CNN
+	1    6250 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -89,9 +89,7 @@ Wire Wire Line
 Wire Wire Line
 	5950 3200 5950 2850
 Wire Wire Line
-	6250 3300 6300 3300
-Wire Wire Line
-	6300 3300 6300 2850
+	6450 3300 6450 3000
 Wire Wire Line
 	3850 5000 3750 5000
 Wire Wire Line
@@ -298,8 +296,6 @@ Text Label 5750 3400 0    50   ~ 0
 CANTX
 Text Label 5750 3500 0    50   ~ 0
 CANRX
-Wire Wire Line
-	5600 3300 6050 3300
 Text Notes 8150 2400 0    50   ~ 0
 I2C-Bus
 Wire Wire Line
@@ -1223,4 +1219,35 @@ Wire Wire Line
 	1350 6300 1350 6200
 Wire Wire Line
 	1350 6200 1450 6200
+$Comp
+L Device:Jumper_NC_Small J202
+U 1 1 5C1073B3
+P 6250 3300
+F 0 "J202" H 6250 3512 50  0000 C CNN
+F 1 "5VUSB" H 6250 3421 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 6250 3300 50  0001 C CNN
+F 3 "~" H 6250 3300 50  0001 C CNN
+	1    6250 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3300 6450 3300
+Wire Wire Line
+	5600 3300 6050 3300
+Wire Wire Line
+	6100 3000 6050 3000
+Wire Wire Line
+	6050 3000 6050 3300
+Connection ~ 6050 3300
+Wire Wire Line
+	6050 3300 6150 3300
+Wire Wire Line
+	6400 3000 6450 3000
+Connection ~ 6450 3000
+Wire Wire Line
+	6450 3000 6450 2850
+Text Label 5750 4500 0    50   ~ 0
+TX1
+Text Label 5750 4400 0    50   ~ 0
+RX1
 $EndSCHEMATC
