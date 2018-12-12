@@ -18,6 +18,13 @@ compiletoflash
 : gpio-open-drain   ( n-pin addr-port -- )
     %0110 -rot gpio-configure ;
 
+: gpio-alternate    ( n-pin addr-port -- )
+    \ alternate function
+    %1011 -rot gpio-configure ;
+
+: gpio-alternate-open-drain ( n-pin addr-port -- )
+    %1111 -rot gpio-configure ;
+
 : gpio-input        ( n-pin addr-port -- )
     %0010 -rot gpio-configure ;
 
@@ -45,6 +52,8 @@ compiletoflash
 
 \ named ports
 13 GPIOC 2constant led
+15 GPIOB 2constant ws-din ( MOSI2 )
 
+0 led gpio!
 
--1 led gpio!
+cornerstone gcold

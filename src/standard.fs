@@ -46,4 +46,24 @@ compiletoflash
   does>   begin dup  dup flash-pagesize 1- and while 2+   repeat  cr
   eraseflashfrom ;
 
+\ -----------------------------------------------------------------------------
+\  Clock setup and timing
+\ -----------------------------------------------------------------------------
+
+\ adjusted for STM32F103 @ 72 MHz (original STM32F100 by Igor de om1zz, 2015)
+
+: 72MHz ( -- )  \ set the main clock to 72 MHz, keep baud rate at 115200
+  $12 FLASH_ACR !                 \ two flash mem wait states
+  16 bit RCC_CR bis!              \ set HSEON
+  begin 17 bit RCC_CR bit@ until  \ wait for HSERDY
+  1 16 lshift                     \ HSE clock is 8 MHz Xtal source for PLL
+  7 18 lshift or                  \ PLL factor: 8 MHz * 9 = 72 MHz = HCLK
+  4  8 lshift or                  \ PCLK1 = HCLK/2
+  2 14 lshift or                  \ ADCPRE = PCLK2/6
+            2 or  RCC_CFGR !      \ PLL is the system clock
+  24 bit RCC_CR bis!              \ set PLLON
+  begin 25 bit RCC_CR bit@ until  \ wait for PLLRDY
+  625 USART1 USARTx_BRR !         \ fix console baud rate
+;
+
 cornerstone cold
