@@ -1250,4 +1250,168 @@ Text Label 5750 4500 0    50   ~ 0
 TX1
 Text Label 5750 4400 0    50   ~ 0
 RX1
+$Comp
+L power:GND #PWR01
+U 1 1 5C11C39D
+P 10000 5800
+F 0 "#PWR01" H 10000 5550 50  0001 C CNN
+F 1 "GND" H 10005 5627 50  0000 C CNN
+F 2 "" H 10000 5800 50  0001 C CNN
+F 3 "" H 10000 5800 50  0001 C CNN
+	1    10000 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5C11C4BF
+P 10200 5700
+F 0 "H3" V 10154 5850 50  0000 L CNN
+F 1 "MountingHole_Pad" V 10245 5850 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 10200 5700 50  0001 C CNN
+F 3 "~" H 10200 5700 50  0001 C CNN
+	1    10200 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5C14261A
+P 10200 5300
+F 0 "H1" V 10154 5450 50  0000 L CNN
+F 1 "MountingHole_Pad" V 10245 5450 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 10200 5300 50  0001 C CNN
+F 3 "~" H 10200 5300 50  0001 C CNN
+	1    10200 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5C142621
+P 10200 5500
+F 0 "H2" V 10154 5650 50  0000 L CNN
+F 1 "MountingHole_Pad" V 10245 5650 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 10200 5500 50  0001 C CNN
+F 3 "~" H 10200 5500 50  0001 C CNN
+	1    10200 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10100 5300 10000 5300
+Wire Wire Line
+	10000 5300 10000 5500
+Wire Wire Line
+	10100 5500 10000 5500
+Connection ~ 10000 5500
+Wire Wire Line
+	10000 5500 10000 5700
+Wire Wire Line
+	10100 5700 10000 5700
+$Comp
+L Mechanical:MountingHole bitkanoneV2
+U 1 1 5C19C29E
+P 10250 5000
+F 0 "bitkanoneV2" H 10350 5046 50  0000 L CNN
+F 1 "GNU Logo" H 10350 4955 50  0000 L CNN
+F 2 "Symbol:Symbol_GNU-Logo_SilkscreenTop" H 10250 5000 50  0001 C CNN
+F 3 "~" H 10250 5000 50  0001 C CNN
+	1    10250 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro XU1
+U 1 1 5C19D2E1
+P 2900 5650
+F 0 "XU1" H 2955 6117 50  0000 C CNN
+F 1 "USB_B_Micro" H 2955 6026 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 3050 5600 50  0001 C CNN
+F 3 "~" H 3050 5600 50  0001 C CNN
+	1    2900 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 5C19D6F1
+P 3300 6250
+F 0 "#PWR0133" H 3300 6000 50  0001 C CNN
+F 1 "GND" H 3305 6077 50  0000 C CNN
+F 2 "" H 3300 6250 50  0001 C CNN
+F 3 "" H 3300 6250 50  0001 C CNN
+	1    3300 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0134
+U 1 1 5C19D78F
+P 3300 5350
+F 0 "#PWR0134" H 3300 5200 50  0001 C CNN
+F 1 "+5V" H 3315 5478 50  0000 L CNN
+F 2 "" H 3300 5350 50  0001 C CNN
+F 3 "" H 3300 5350 50  0001 C CNN
+	1    3300 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 6050 2800 6150
+Wire Wire Line
+	2800 6150 2900 6150
+Wire Wire Line
+	2900 6150 2900 6050
+Wire Wire Line
+	2900 6150 3300 6150
+Wire Wire Line
+	3300 6150 3300 6250
+Connection ~ 2900 6150
+Wire Wire Line
+	3200 5850 3300 5850
+Wire Wire Line
+	3300 5850 3300 6150
+Connection ~ 3300 6150
+Wire Wire Line
+	3200 5450 3300 5450
+Text Label 5750 4200 0    50   ~ 0
+USBD+
+Text Label 5750 4300 0    50   ~ 0
+USBD-
+Text Label 3750 5650 0    50   ~ 0
+USBD+
+Text Label 3750 5750 0    50   ~ 0
+USBD-
+Wire Wire Line
+	5600 4200 5750 4200
+Wire Wire Line
+	5600 4300 5750 4300
+Wire Wire Line
+	3200 5650 3350 5650
+Wire Wire Line
+	3200 5750 3350 5750
+Wire Wire Line
+	10000 5800 10000 5700
+Connection ~ 10000 5700
+Wire Wire Line
+	3300 5450 3300 5350
+$Comp
+L Jumper:SolderJumper_2_Open JU1
+U 1 1 5C2FAC8C
+P 3500 5650
+F 0 "JU1" H 3500 5855 50  0000 C CNN
+F 1 "Jumper" H 3500 5764 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3500 5650 50  0001 C CNN
+F 3 "~" H 3500 5650 50  0001 C CNN
+	1    3500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JU2
+U 1 1 5C30698D
+P 3500 5750
+F 0 "JU2" H 3500 5550 50  0000 C CNN
+F 1 "Jumper" H 3500 5650 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3500 5750 50  0001 C CNN
+F 3 "~" H 3500 5750 50  0001 C CNN
+	1    3500 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 5650 3750 5650
+Wire Wire Line
+	3650 5750 3750 5750
 $EndSCHEMATC
