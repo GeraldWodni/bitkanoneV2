@@ -4,3 +4,5 @@
 #include registers.fs
 #include standard.fs
 #include gpio.fs
+#include spi.fs
+#include ws2812b.fs

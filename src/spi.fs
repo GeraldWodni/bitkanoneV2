@@ -1,12 +1,12 @@
 \ SPI driver for STM32F103
 \ (c)copyright 2018 by Gerald Wodni <gerald.wodni@gmail.com>
 
+compiletoflash
+
 : spi-wait-ready ( -- )
-    0
     begin
-        1+
-        SPI2 SPIx_SR $82 and 0=
-    until . ;
+        SPI2 SPIx_SR h@ $02 and \ wait for TXE (Transmit buffer empty)
+    until ;
 
 : spi! ( x -- )
     spi-wait-ready
@@ -38,7 +38,7 @@
     \     | |||||\ ||Cphase
     \ 111111|||||\\|||
     \ 5432109876543210
-     %0000001101111100 SPI2 SPIx_CR1 h!
+     %0000001101011100 SPI2 SPIx_CR1 h!
 
     \ TXEIE: TX Buffer empty interrupt enable
     \ |RXNEIE: RX Buffer not empty interrupt enable
@@ -51,7 +51,4 @@
     \ 76543210
      %00000100 SPI2 SPIx_CR2 h!
      ;
-init-spi
 
-: mspi 16 spi! 16 spi! 16 spi! 16 spi! ;
-mspi
