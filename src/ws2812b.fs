@@ -44,3 +44,5 @@ compiletoflash
 
 init-spi
 bill
+
+cornerstone wcold

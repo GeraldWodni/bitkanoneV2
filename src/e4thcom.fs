@@ -6,3 +6,4 @@
 #include gpio.fs
 #include spi.fs
 #include ws2812b.fs
+#include test.fs
