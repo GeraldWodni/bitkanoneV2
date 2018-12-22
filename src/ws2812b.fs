@@ -22,7 +22,7 @@ compiletoflash
 		dup >rgb
 	loop drop ;
 
-4 constant leds
+49 constant leds
 
 : on      $FFFFFF leds n-leds ;
 : off     $000000 leds n-leds ;
@@ -35,11 +35,11 @@ compiletoflash
 : white	  $1F1F1F leds n-leds ;
 
 : bill leds 0 do
-		$FF0000 >rgb
-		$FFFF00 >rgb
-		$00FF00 >rgb
-		$0000FF >rgb
-		$FFFFFF >rgb
+		$1F0000 >rgb
+		$1F1F00 >rgb
+		$001F00 >rgb
+		$00001F >rgb
+		$1F1F1F >rgb
 	loop ;
 
 init-spi
