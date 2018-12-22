@@ -14,7 +14,7 @@ compiletoflash
 : hex. ( u -- )
     base @ >r hex u. r> base ! ;
 
-\ Taken from USB driver for STM32F103 by Jean-Claude Wippler, 
+\ <<< Taken from USB driver for STM32F103 by Jean-Claude Wippler
 \   configured for Shenzhen LC Technology board with STM32F103C8T6.
 \ -----------------------------------------------------------------------------
 \   Flash tools
@@ -65,5 +65,23 @@ compiletoflash
   begin 25 bit RCC_CR bit@ until  \ wait for PLLRDY
   625 USART1 USARTx_BRR !         \ fix console baud rate
 ;
+
+\ -----------------------------------------------------------------------------
+\ >>> Taken from USB driver for STM32F103 by Jean-Claude Wippler
+\ -----------------------------------------------------------------------------
+
+\ Further utils
+
+\ Wait for any bit of mask in register to become true
+: wait4true ( x-mask h-addr -- )
+    begin
+        2dup h@ and
+    until 2drop ;
+
+\ Wait for all bits of mask in register to become false
+: wait4false ( n-bit h-addr -- )
+    begin
+        2dup h@ and 0=
+    until 2drop ;
 
 cornerstone cold
