@@ -162,6 +162,13 @@ compiletoflash
     0 i2c-ack   \ nak
     i2c-stop ;
 
-: x $41 $68 i2c-read ;
+\ warning: expects correct register and address, no error checking
+\ TODO: rewrite to deal with errors
+: i2c-write ( n-value n-register n-addr -- f )
+    2* \ add write bit
+    [i2c drop   \ write address
+    >i2c drop   \ write register
+    >i2c        \ write value
+    i2c-stop ;
 
 init-i2c
