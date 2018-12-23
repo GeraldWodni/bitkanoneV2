@@ -66,6 +66,19 @@ compiletoflash
 10 GPIOB 2constant sens-scl
 11 GPIOB 2constant sens-sda
 
+ 0 GPIOB 2constant photo2
+ 1 GPIOB 2constant photo1
+
+ 0 GPIOA 2constant pwm1
+ 1 GPIOA 2constant en1
+ 2 GPIOA 2constant pwm2
+ 3 GPIOA 2constant en2
+
+11 GPIOA 2constant t-right
+12 GPIOA 2constant t-bottom
+12 GPIOB 2constant t-left
+15 GPIOA 2constant t-top
+
 \ fetch button mask
 : buttons@ ( -- x )
     0

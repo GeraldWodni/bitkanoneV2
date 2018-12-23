@@ -243,28 +243,28 @@ $40001800 constant TIM12
 $40001C00 constant TIM13  
 $40002000 constant TIM14  
 
-$0  offset TIM1_CR1
-$4  offset TIM1_CR2
-$8  offset TIM1_SMCR
-$C  offset TIM1_DIER
-$10 offset TIM1_SR
-$14 offset TIM1_EGR
-$18 offset TIM1_CCMR1_Output
-$18 offset TIM1_CCMR1_Input
-$1C offset TIM1_CCMR2_Output
-$1C offset TIM1_CCMR2_Input
-$20 offset TIM1_CCER
-$24 offset TIM1_CNT
-$28 offset TIM1_PSC
-$2C offset TIM1_ARR
-$34 offset TIM1_CCR1
-$38 offset TIM1_CCR2
-$3C offset TIM1_CCR3
-$40 offset TIM1_CCR4
-$48 offset TIM1_DCR
-$4C offset TIM1_DMAR
-$30 offset TIM1_RCR
-$44 offset TIM1_BDTR
+$0  offset TIMx_CR1
+$4  offset TIMx_CR2
+$8  offset TIMx_SMCR
+$C  offset TIMx_DIER
+$10 offset TIMx_SR
+$14 offset TIMx_EGR
+$18 offset TIMx_CCMR1_Output
+$18 offset TIMx_CCMR1_Input
+$1C offset TIMx_CCMR2_Output
+$1C offset TIMx_CCMR2_Input
+$20 offset TIMx_CCER
+$24 offset TIMx_CNT
+$28 offset TIMx_PSC
+$2C offset TIMx_ARR
+$34 offset TIMx_CCR1
+$38 offset TIMx_CCR2
+$3C offset TIMx_CCR3
+$40 offset TIMx_CCR4
+$48 offset TIMx_DCR
+$4C offset TIMx_DMAR
+$30 offset TIMx_RCR
+$44 offset TIMx_BDTR
         
 	
 \ Inter-integrated circuit interface
