@@ -6,5 +6,6 @@
 #include gpio.fs
 #include spi.fs
 #include ws2812b.fs
-#include i2c.fs
+#include i2c-sw.fs
+#include mpu.fs
 \ #include test.fs

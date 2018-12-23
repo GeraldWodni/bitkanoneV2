@@ -14,6 +14,15 @@ compiletoflash
 : hex. ( u -- )
     base @ >r hex u. r> base ! ;
 
+: bounds ( c-addr n -- addr-end addr-start )
+    over + swap ;
+
+\ sign extend 16 to 32 bit
+: sign-h ( u1 -- n1 )
+    dup $8000 and if
+        $FFFF0000 or
+    then ;
+
 \ <<< Taken from USB driver for STM32F103 by Jean-Claude Wippler
 \   configured for Shenzhen LC Technology board with STM32F103C8T6.
 \ -----------------------------------------------------------------------------

@@ -130,24 +130,6 @@ compiletoflash
         then
     loop ;
 
-: i2c-write ( n-register n-addr -- f )
-    2* \ add write bit
-    [i2c if
-        >i2c
-    else
-        drop
-        0
-    then i2c-stop ;
-
-: i2c-read ( n-addr -- n-value f )
-    2* 1 or \ add read bit
-    [i2c if
-        i2c>
-    else
-        drop
-        -1
-    then i2c-stop ;
-
 \ warning: expects correct register and address, no error checking
 \ TODO: rewrite to deal with errors
 : i2c-read ( n-register n-addr -- n-value 1 | 0 )
@@ -160,6 +142,29 @@ compiletoflash
     [i2c drop   \ write address
     i2c>
     0 i2c-ack   \ nak
+    -1          \ fake flag
+    i2c-stop ;
+
+\ warning: expects correct register and address, no error checking
+\ TODO: rewrite to deal with errors
+: i2c-read-n ( addr n n-register n-addr -- n-value 1 | 0 )
+    tuck
+    2* \ add write bit
+    [i2c drop   \ write address
+    >i2c drop   \ write register
+
+    2* 1 or \ add read bit
+    [i2c drop   \ write address
+
+    1- 0 swap   \ countdown
+    do
+        i2c>        \ read byte
+        over c!     \ store in buffer
+        1+          \ increment buffer
+        i i2c-ack   \ do not ack last byte
+    -1 +loop
+    drop        \ drop buffer
+    -1          \ fake flag
     i2c-stop ;
 
 \ warning: expects correct register and address, no error checking
@@ -170,5 +175,11 @@ compiletoflash
     >i2c drop   \ write register
     >i2c        \ write value
     i2c-stop ;
+
+\ Test: read 6 registers into buffer
+\ 6 buffer: ibuff
+\ : i2c-test ibuff 6 $41 $68 i2c-read-n . ;
+
+cornerstone icold
 
 init-i2c
