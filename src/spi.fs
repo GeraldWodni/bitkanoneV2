@@ -18,7 +18,7 @@ compiletoflash
     SPI2 SPIx_DR h@ hex. ;
 
 : init-spi
-    72mhz
+    init-pwm
     
     $4000 RCC_APB1ENR bis!  \ enable SPI2 Clock
 

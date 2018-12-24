@@ -7,7 +7,7 @@ compiletoflash
 \ PWM2 on PA2: TIM2_CH3
 
 : init-pwm
-    init-i2c
+    72mhz
 
     pwm1 gpio-alternate
     pwm2 gpio-alternate
