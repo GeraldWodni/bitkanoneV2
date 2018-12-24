@@ -50,9 +50,16 @@ compiletoflash
                 $00001F >rgb
                 3 n-leds
                 test-pattern
+                0 pwm1! 2000 pwm2!
             endof    \ S1: test pattern
-            $2 of blue         endof    \ S2: supernice blue
-            $4 of off          endof    \ S3: pitch black
+            $2 of
+                blue
+                1000 dup pwm1! pwm2!
+            endof    \ S2: supernice blue
+            $4 of
+                off
+                2000 pwm1! 0 pwm2!
+            endof    \ S3: pitch black
         endcase
         sdelay
     key? until
