@@ -8,6 +8,7 @@ compiletoflash
 
 : init-pwm
     72mhz
+    init-gpio
 
     pwm1 gpio-alternate
     pwm2 gpio-alternate
