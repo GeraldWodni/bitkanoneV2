@@ -69,6 +69,27 @@ TEMP_H      2 + constant GYRO_XOUT  \ gyrometer X,Y,Z (16bit 2s-complement)
         mpu.
     key? until ;
 
+: mpu-xy@ ( -- n-x n-y )
+    ACCEL_XOUT    h@ sign-h
+    ACCEL_XOUT 2+ h@ sign-h ;
+
+: mpu-xy..
+    begin
+        mpu-read drop
+        mpu-xy@ swap
+        cr swap 128 / . ." /" 128 / .
+    key? until ;
+
+0 variable mpu-max-x
+: mpu-maxx ( -- )
+    begin
+        mpu-read drop
+        mpu-xy@ drop
+        mpu-max-x @ max
+        mpu-max-x !
+        cr mpu-max-x @ .
+    key? until ;
+
 : init-mpu ( -- )
     init-i2c
 
@@ -84,5 +105,7 @@ TEMP_H      2 + constant GYRO_XOUT  \ gyrometer X,Y,Z (16bit 2s-complement)
     \ Set sample rate = gyroscope output rate/(1 + SMPLRT_DIV)
     $01 SMPLRT_DIV mpu! \ Use a 200 Hz sample rate 
     ;
+
+cornerstone mcold
 
 init-mpu

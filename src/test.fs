@@ -16,21 +16,41 @@ compiletoflash
     $008080 test-row
     $000080 test-row
     $800080 test-row
-    $808080 test-row ;
+    ;
 
 : sdelay
     $FFFF 0 do loop ;
 
+: angle2col ( n-angle -- x-color )
+    dup abs $80 /
+    swap 0< if 8 lshift then
+    8 lshift ;
+
+0 variable test-buttons
 : test
-    init-gpio
+    init-mpu
     buttons@ 0<> if cr ." Aborting boot" exit then          \ no init if S1 is pressed
     
     init-spi
     test-pattern
+    $808080 test-row
     begin
         \ test buttons
-        buttons@ case
-            $1 of test-pattern endof    \ S1: test pattern
+        buttons@ ?dup if
+            test-buttons !
+        then
+        test-buttons @
+        case
+            $1 of
+                mpu-read drop
+                mpu-xy@
+                angle2col swap
+                angle2col
+                3 n-leds
+                $00001F >rgb
+                3 n-leds
+                test-pattern
+            endof    \ S1: test pattern
             $2 of blue         endof    \ S2: supernice blue
             $4 of off          endof    \ S3: pitch black
         endcase
