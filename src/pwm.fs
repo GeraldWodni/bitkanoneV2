@@ -10,9 +10,6 @@ compiletoflash
     init-i2c
 
     pwm1 gpio-alternate
-    1 GPIOA gpio-alternate
-    2 GPIOA gpio-alternate
-    3 GPIOA gpio-alternate
     pwm2 gpio-alternate
 
     $01 RCC_APB1ENR bis!    \ enable timer 2 clock
@@ -24,13 +21,9 @@ compiletoflash
     1000  TIM2 TIMx_CCR1 h! \ duty cycle (1ms)
     1000  TIM2 TIMx_CCR3 h! \ duty cycle (1ms)
 
-    $68 TIM2 TIMx_CCMR1_Output h!    \ PWM mode CH1
-    $68 TIM2 TIMx_CCMR2_Output h!    \ PWM mode CH3
-    $99 TIM2 TIMx_CCER h!   \ OC1 & OC3 signal = output
-
-    1000  TIM2 TIMx_CCR2 h! \ duty cycle (1ms)
-    $6800 TIM2 TIMx_CCMR1_Output hbis!    \ PWM mode CH2
-    $6800 TIM2 TIMx_CCMR2_Output hbis!    \ PWM mode CH4
+    $68 TIM2 TIMx_CCMR1_Output h!    \ PWM mode CH1 & CH2
+    $68 TIM2 TIMx_CCMR2_Output h!    \ PWM mode CH1 & CH2
+    $0101 TIM2 TIMx_CCER h!   \ OC1 & OC2 signal = output
 
     $01 TIM2 TIMx_EGR hbis! \ update shadow registers
     $01 TIM2 TIMx_CR1 hbis! \ enable timer 2
