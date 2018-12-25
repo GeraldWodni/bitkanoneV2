@@ -8,7 +8,8 @@ PlateThickness = 2;
 NutDepth = 0.5;
 
 ScrewPadding = 2;
-$fn = 64;
+//$fn = 64;
+$fn = 12;
 
 include <Screw.scad>;
 
@@ -46,4 +47,43 @@ module bitPlate() {
 }
 
 
-bitPlate();
+//bitPlate();
+
+module servoArmP( outerDiameter, centerDiameter, spacing, centerHeight, h ) {
+    hull() {
+        translate( [ spacing, 0, 0 ] )
+        cylinder( d = outerDiameter, h = h );
+        
+        cylinder( d = centerDiameter, h = h );
+        
+        translate( [-spacing, 0, 0 ] )
+        cylinder( d = outerDiameter, h = h );
+    }
+    cylinder( d = centerDiameter, h = centerHeight );
+}
+
+module servoArm() {
+    OuterDiameter = 5;
+    CenterDiameter = 7;
+    CrossDistance = 10;
+    CrossHeight = 10;
+    CenterHeight = 30;
+ 
+    servoArmP( OuterDiameter, CenterDiameter, CrossDistance, CenterHeight, CrossHeight );
+}
+
+module servoCross() {
+    OuterDiameter = 5;
+    CenterDiameter = 7;
+    CrossDistance = 10;
+    CrossHeight = 10;
+    CenterHeight = 20;
+ 
+    servoArmP( OuterDiameter, CenterDiameter, CrossDistance, CenterHeight, CrossHeight );
+    rotate([0, 0, 90])
+    servoArmP( OuterDiameter, CenterDiameter, CrossDistance, CenterHeight, CrossHeight );
+}
+
+servoCross();
+translate([0, 20, 0])
+servoArm();
