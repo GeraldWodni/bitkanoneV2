@@ -38,6 +38,15 @@ compiletoflash
         i c@ hex. cr
     loop ;
 
+
+: free-ram
+	compiletoram
+	flashvar-here here - u. ;
+
+: free-flash
+	compiletoflash
+	$10000 here - u. ;
+
 \ <<< Taken from USB driver for STM32F103 by Jean-Claude Wippler
 \   configured for Shenzhen LC Technology board with STM32F103C8T6.
 \ -----------------------------------------------------------------------------
