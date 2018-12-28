@@ -43,12 +43,12 @@ empty-app variable last-app
     while
         swap 1+ swap
         2 cells + @
-    repeat drop 1- ;
+    repeat drop ;
 
 \ get app per index
 : app-n ( n -- addr )
     \ apps# 1- min 0 max  \ limit bounds
-    >r last-app @ r>    \ put last app on stack
+    >r last-app @ apps# r> - 1- \ put last app on stack
     0 ?do
         2 cells + @
     loop ;
