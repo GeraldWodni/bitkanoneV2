@@ -86,9 +86,28 @@ compiletoflash
     sw2 gpio@ 0= if $2 or then
     sw3 gpio@ 0= if $4 or then ;
 
+\ only fetch on press down
+0 variable last-buttons
+: buttons-once@ ( -- x )
+    last-buttons @ 0= if
+        buttons@ dup last-buttons !
+    else
+        buttons@ 0= if
+            0 last-buttons !
+        then
+        0 \ report no button press
+    then ;
+
 : buttons@. ( -- )
     begin
         cr buttons@ hex.
+    key? until ;
+
+: buttons-once@. ( -- )
+    begin
+        buttons-once@ ?dup if
+            cr ." Pressed: " hex.
+        then
     key? until ;
 
 : init-gpio ( -- )

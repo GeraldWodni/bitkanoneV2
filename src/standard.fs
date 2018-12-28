@@ -38,14 +38,30 @@ compiletoflash
         i c@ hex. cr
     loop ;
 
+\ warning: only works on STM32
+: flash! ( x addr -- )
+    >r dup
+    r@ hflash!
+    16 rshift
+    r> 2 + hflash! ;
 
 : free-ram
-	compiletoram
-	flashvar-here here - u. ;
+    compiletoram
+    flashvar-here here - u. ;
 
 : free-flash
-	compiletoflash
-	$10000 here - u. ;
+    compiletoflash
+    $10000 here - u. ;
+
+\ taken from mecrisp dissambler by Matthias Koch
+: words ( -- )
+  cr
+  dictionarystart
+  begin
+    dup 6 + ctype space
+    dictionarynext
+  until
+  drop ;
 
 \ <<< Taken from USB driver for STM32F103 by Jean-Claude Wippler
 \   configured for Shenzhen LC Technology board with STM32F103C8T6.

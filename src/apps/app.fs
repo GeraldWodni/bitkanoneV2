@@ -54,19 +54,49 @@ compiletoflash
 
 : x ." LS:" apps# . cr ;
 
-: xi ( -- ) ;
-: xr ( -- ) ;
+: xi red ;
+: xr yellow  ;
 
 ' xi ' xr create-app
 
-: yi ( -- ) ;
-: yr ( -- ) ;
+: yi green ;
+: yr cyan ;
 
 ' yi ' yr create-app
 
-: xy. ( -- )
-    cr ." xi:" ['] xi hex.
-    cr ." xr:" ['] xr hex.
-    cr ." yi:" ['] yi hex.
-    cr ." yr:" ['] yr hex. ;
-xy.
+: zi blue ;
+: zr magenta ;
+
+' zi ' zr create-app
+
+\ main app scheduler
+0 variable current-app
+
+: next-app ( -- )
+    current-app @ 1+
+    dup apps# >= if
+        0
+    then current-app ! ;
+
+: prev-app ( -- )
+    current-app @ ?dup if
+        1-
+    else
+        apps# 1-
+    then current-app ! ;
+
+: delay $FFFFF 0 do loop ;
+
+: apper ( -- )
+    \ run
+    init-mpu
+    begin
+        current-app @ app-n cell+ @ execute
+        buttons-once@ case
+            $1 of           true endof
+            $2 of prev-app false endof
+            $4 of next-app false endof
+            false
+        endcase
+        delay
+    until $000001 leds n-leds ;
