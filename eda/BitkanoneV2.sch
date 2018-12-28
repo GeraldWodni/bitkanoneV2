@@ -1437,18 +1437,7 @@ F 3 "~" H 7050 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 6900 3300 0    50   ~ 0
-Idee Matthias: Ledcom Magnet über TOPO pins
-$Comp
-L power:GND #PWR?
-U 1 1 5C2A7DE0
-P 7050 4500
-F 0 "#PWR?" H 7050 4250 50  0001 C CNN
-F 1 "GND" H 7055 4327 50  0000 C CNN
-F 2 "" H 7050 4500 50  0001 C CNN
-F 3 "" H 7050 4500 50  0001 C CNN
-	1    7050 4500
-	1    0    0    -1  
-$EndComp
+Idee Matthias: Ledcom Magnet über TOPO pins\nLeitungen durch Groundguards
 Wire Wire Line
 	7050 4000 7050 4100
 Wire Wire Line
@@ -1477,17 +1466,6 @@ F 1 "1k8" H 7470 4205 50  0000 L CNN
 F 2 "" V 7330 4250 50  0001 C CNN
 F 3 "~" H 7400 4250 50  0001 C CNN
 	1    7400 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C2FCD25
-P 7400 4500
-F 0 "#PWR?" H 7400 4250 50  0001 C CNN
-F 1 "GND" H 7405 4327 50  0000 C CNN
-F 2 "" H 7400 4500 50  0001 C CNN
-F 3 "" H 7400 4500 50  0001 C CNN
-	1    7400 4500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1520,17 +1498,6 @@ F 3 "~" H 7750 4250 50  0001 C CNN
 	1    7750 4250
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C309193
-P 7750 4500
-F 0 "#PWR?" H 7750 4250 50  0001 C CNN
-F 1 "GND" H 7755 4327 50  0000 C CNN
-F 2 "" H 7750 4500 50  0001 C CNN
-F 3 "" H 7750 4500 50  0001 C CNN
-	1    7750 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7750 4000 7750 4100
 Wire Wire Line
@@ -1561,17 +1528,6 @@ F 3 "~" H 8100 4250 50  0001 C CNN
 	1    8100 4250
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C315A67
-P 8100 4500
-F 0 "#PWR?" H 8100 4250 50  0001 C CNN
-F 1 "GND" H 8105 4327 50  0000 C CNN
-F 2 "" H 8100 4500 50  0001 C CNN
-F 3 "" H 8100 4500 50  0001 C CNN
-	1    8100 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8100 4000 8100 4100
 Wire Wire Line
@@ -1580,4 +1536,17 @@ Text Label 8100 3600 1    50   ~ 0
 TLeft
 Wire Wire Line
 	8100 3700 8100 3600
+Wire Wire Line
+	8100 4500 7750 4500
+Wire Wire Line
+	7400 4500 7050 4500
+Connection ~ 7400 4500
+Wire Wire Line
+	7400 4500 7750 4500
+Connection ~ 7750 4500
+Text Label 7050 4900 1    50   ~ 0
+LedCom
+Wire Wire Line
+	7050 4500 7050 4900
+Connection ~ 7050 4500
 $EndSCHEMATC
