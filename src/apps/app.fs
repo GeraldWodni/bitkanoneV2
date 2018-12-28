@@ -9,6 +9,7 @@ compiletoflash
 \ 8: previous-app
 
 0 variable last-app
+20 variable frame-delay
 
 \ create new app
 : create-app ( xt-logo xt-run -- )
@@ -74,12 +75,12 @@ compiletoflash
         apps# 1-
     then current-app ! ;
 
-: delay $FFFFF 0 do loop ;
-
 : apper ( -- )
     \ run
     init-mpu
+    0 \ free running step counter
     begin
+        dup \ get free running counter
         current-app @ app-n cell+ @ execute
         buttons-once@ case
             $1 of           true endof
@@ -87,5 +88,19 @@ compiletoflash
             $4 of next-app false endof
             false
         endcase
-        delay
-    until $000001 leds n-leds ;
+        swap \ free running counter
+            1+
+            \ dup leds dup * = if \ allow counter to run until leds²
+            \    drop 0
+            \ then
+        swap
+        flush
+        frame-delay @ ms   \ frame delay
+
+        key? or
+    until $000001 leds n-leds drop ;
+
+\ info: an app gets a free running counter topping at leds²-1
+\ frame time: ~20ms ^= 50Hz/frames
+
+cornerstone acold
