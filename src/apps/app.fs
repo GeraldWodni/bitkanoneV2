@@ -47,8 +47,8 @@ empty-app variable last-app
 
 \ get app per index
 : app-n ( n -- addr )
-    \ apps# 1- min 0 max  \ limit bounds
-    >r last-app @ apps# r> - 1- \ put last app on stack
+    >r last-app @
+    apps# r> over 1- min 0 max - 1- \ limit bounds
     0 ?do
         2 cells + @
     loop ;
