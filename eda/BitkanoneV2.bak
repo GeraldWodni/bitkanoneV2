@@ -1371,9 +1371,9 @@ Text Label 5750 4200 0    50   ~ 0
 USBD+
 Text Label 5750 4300 0    50   ~ 0
 USBD-
-Text Label 3350 5650 0    50   ~ 0
+Text Label 3750 5650 0    50   ~ 0
 USBD+
-Text Label 3350 5750 0    50   ~ 0
+Text Label 3750 5750 0    50   ~ 0
 USBD-
 Wire Wire Line
 	5600 4200 5750 4200
@@ -1388,4 +1388,30 @@ Wire Wire Line
 Connection ~ 10000 5700
 Wire Wire Line
 	3300 5450 3300 5350
+$Comp
+L Jumper:SolderJumper_2_Open JU1
+U 1 1 5C2FAC8C
+P 3500 5650
+F 0 "JU1" H 3500 5855 50  0000 C CNN
+F 1 "Jumper" H 3500 5764 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3500 5650 50  0001 C CNN
+F 3 "~" H 3500 5650 50  0001 C CNN
+	1    3500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JU2
+U 1 1 5C30698D
+P 3500 5750
+F 0 "JU2" H 3500 5550 50  0000 C CNN
+F 1 "Jumper" H 3500 5650 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3500 5750 50  0001 C CNN
+F 3 "~" H 3500 5750 50  0001 C CNN
+	1    3500 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 5650 3750 5650
+Wire Wire Line
+	3650 5750 3750 5750
 $EndSCHEMATC
