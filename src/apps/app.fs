@@ -8,8 +8,7 @@ compiletoflash
 \ 4: xt-run
 \ 8: previous-app
 
-create empty-app 0 , 0 ,  0 ,
-empty-app variable last-app
+0 variable last-app
 
 \ create new app
 : create-app ( xt-logo xt-run -- )
