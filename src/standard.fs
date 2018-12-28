@@ -17,11 +17,26 @@ compiletoflash
 : bounds ( c-addr n -- addr-end addr-start )
     over + swap ;
 
+: between ( n-val n-min n-max-1 -- f )
+	>r over <=
+	swap r> < and ;
+
 \ sign extend 16 to 32 bit
 : sign-h ( u1 -- n1 )
     dup $8000 and if
         $FFFF0000 or
     then ;
+
+: between ( n-val n-min n-max-1 -- f )
+	>r over <=
+	swap r> < and ;
+
+: dump ( c-addr n -- )
+    cr
+    bounds do
+        i hex. ."  "
+        i c@ hex. cr
+    loop ;
 
 \ <<< Taken from USB driver for STM32F103 by Jean-Claude Wippler
 \   configured for Shenzhen LC Technology board with STM32F103C8T6.

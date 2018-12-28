@@ -7,6 +7,7 @@
 #include pwm.fs
 #include spi.fs
 #include ws2812b.fs
+#include xy.fs
 #include i2c-sw.fs
 #include mpu.fs
 \ #include test.fs
