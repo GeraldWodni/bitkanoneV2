@@ -26,11 +26,13 @@ compiletoflash
 : scanner-logo cyan ;
 : scanner-run ( n -- )
     1 frame-delay !
+    700 pwm2!
     \ movement
-    dup 2000 mod dup 1000 > if
+    dup 2000 mod
+    dup 1000 > if
         2000 swap -
     then
-    dup cr . 500 + pwm1!
+    500 + pwm1!
 
     \ animation
     dup leds mod 0= if
@@ -47,6 +49,7 @@ compiletoflash
             drop 0
         then
         scanner-x !
+        cr .s
     else
         $1 and if
             decay-grid

@@ -55,7 +55,7 @@ compiletoflash
 
 \ register simple white app
 : white-logo ( -- )        red   ;
-: white-run  ( n -- ) drop white ;
+: white-run  ( n -- ) 1000 pwm1! 1000 pwm2! drop white ;
 
 ' white-logo ' white-run create-app
 
@@ -65,7 +65,7 @@ compiletoflash
 : next-app ( -- )
     current-app @ 1+
     dup apps# >= if
-        0
+        drop 0
     then current-app ! ;
 
 : prev-app ( -- )
@@ -86,13 +86,10 @@ compiletoflash
             $1 of           true endof
             $2 of prev-app false endof
             $4 of next-app false endof
-            false
+            false swap
         endcase
         swap \ free running counter
             1+
-            \ dup leds dup * = if \ allow counter to run until leds²
-            \    drop 0
-            \ then
         swap
         flush
         frame-delay @ ms   \ frame delay
