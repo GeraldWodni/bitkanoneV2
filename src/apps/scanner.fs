@@ -26,11 +26,18 @@ compiletoflash
 : scanner-logo cyan ;
 : scanner-run ( n -- )
     1 frame-delay !
+    \ movement
+    dup 2000 mod dup 1000 > if
+        2000 swap -
+    then
+    dup cr . 500 + pwm1!
+
+    \ animation
     dup leds mod 0= if
         drop
         scanner-x @ dup
         dup cols >= if  \ reverse direction
-            12 swap -
+            cols 2* 2 - swap -
         then
 
         $7F0000 swap h-line
