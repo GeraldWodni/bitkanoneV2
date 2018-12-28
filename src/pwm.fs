@@ -40,4 +40,13 @@ compiletoflash
     2000 min 0 max 500 +
     TIM2 TIMx_CCR3 h! ;
 
+\ delay for n us
+: us ( -- )  TIM2 TIMx_CNT @ + 20000 mod begin TIM2 TIMx_CNT @ over = until drop ;
+
+\ delay for 1ms
+: 1ms ( -- ) TIM2 TIMx_CNT @ 1000 + 20000 mod begin TIM2 TIMx_CNT @ over = until drop ;
+
+\ delay for n ms
+: ms ( n -- ) 0 do 1ms loop ;
+
 init-pwm

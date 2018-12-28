@@ -52,22 +52,11 @@ compiletoflash
         2 cells + @
     loop ;
 
-: x ." LS:" apps# . cr ;
+\ register simple white app
+: white-logo ( -- )        red   ;
+: white-run  ( n -- ) drop white ;
 
-: xi red ;
-: xr yellow  ;
-
-' xi ' xr create-app
-
-: yi green ;
-: yr cyan ;
-
-' yi ' yr create-app
-
-: zi blue ;
-: zr magenta ;
-
-' zi ' zr create-app
+' white-logo ' white-run create-app
 
 \ main app scheduler
 0 variable current-app
