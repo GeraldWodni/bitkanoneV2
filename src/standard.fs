@@ -38,6 +38,9 @@ compiletoflash
         i c@ hex. cr
     loop ;
 
+\ helpers for handling 3 items on stack
+: 3dup >r 2dup r@ -rot r> ;
+
 \ warning: only works on STM32
 : flash! ( x addr -- )
     >r dup

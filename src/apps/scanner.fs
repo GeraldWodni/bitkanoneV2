@@ -3,6 +3,8 @@
 
 compiletoflash
 
+0 variable scanner-hue
+
 : h-line ( x-color n-col -- )
     rows 0 do
         2dup i xy!
@@ -28,7 +30,16 @@ compiletoflash
             cols 2* 2 - swap -
         then
 
-        $7F0000 swap h-line
+        \ draw line in hue
+        scanner-hue @ $FF $7F hsv>rgb
+        swap h-line
+
+        \ increment hue
+        scanner-hue @ dup 1024 > if
+            drop 0
+        else
+            1+
+        then scanner-hue !
 
         1+
         dup cols 2* 2 - >= if
