@@ -43,6 +43,3 @@ compiletoflash
     then ;
 
 ' scanner-logo ' scanner-run create-app
-
-1 current-app !
-apper

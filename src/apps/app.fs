@@ -6,17 +6,34 @@ compiletoflash
 \ app structue:
 \ 0: xt-logo
 \ 4: xt-run
-\ 8: previous-app
+\ 8: next-app
 
-0 variable last-app
 20000 variable frame-delay
+
+\ register simple white app
+: white-logo ( -- )        red   ;
+: white-run  ( n -- ) 1000 pwm1! 1000 pwm2! drop white ;
+
+here
+' white-logo ' white-run swap , , -1 ,  \ manual first app-entry
+constant first-app
+
+\ get pointer to last app
+: last-app ( -- addr )
+    first-app
+    begin
+        dup 2 cells + @
+        -1 <>
+    while
+        2 cells + @     \ @bernd: FIXME
+    repeat ;
 
 \ create new app
 : create-app ( xt-logo xt-run -- )
     cr ." CREATE:" 2dup swap hex. hex.
-    here >r
-    swap , , last-app @ , \ create new app and point to last one
-    r> last-app ! ;    \ set current app as last
+    here last-app 2 cells + flash! \ update previous next-app pointer
+    swap , , -1 ,   \ create new app and leave next field empty
+    ; \ set current app as last
 
 \ print app xt and return previous app
 : app. ( addr -- addr-prev )
@@ -27,37 +44,29 @@ compiletoflash
 
 \ list all apps' xts
 : ls-apps ( -- )
-    last-app @
+    first-app
     begin
-        dup 0<>
-    while
         app.
-    repeat drop ;
+        dup -1 =
+    until drop ;
 
 \ get number of apps
 : apps# ( -- n )
     0
-    last-app @
+    first-app
     begin
-        dup 0<>
-    while
         swap 1+ swap
         2 cells + @
-    repeat drop ;
+        dup -1 =
+    until drop ;
 
 \ get app per index
 : app-n ( n -- addr )
-    >r last-app @
+    >r first-app
     apps# r> over 1- min 0 max - 1- \ limit bounds
     0 ?do
         2 cells + @
     loop ;
-
-\ register simple white app
-: white-logo ( -- )        red   ;
-: white-run  ( n -- ) 1000 pwm1! 1000 pwm2! drop white ;
-
-' white-logo ' white-run create-app
 
 \ main app scheduler
 0 variable current-app
