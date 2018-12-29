@@ -8,7 +8,6 @@ $FFAF3F variable glitter-color
 : glitter-logo ( -- ) ;
 : glitter-run ( n -- )
     50 frame-delay !
-    1000 pwm1! 
 
     \ slowly dive up
     dup 5000 mod dup 10 / 300 + pwm2!
