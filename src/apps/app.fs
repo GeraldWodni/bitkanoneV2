@@ -9,10 +9,14 @@ compiletoflash
 \ 8: next-app
 
 20000 variable frame-delay
+\ TODO: replace demo countdown by real timer!
+10000 variable demo \ switch to 0 for manual control
 
 \ register simple white app
 : white-logo ( -- )        red   ;
-: white-run  ( n -- ) 1000 pwm1! 1000 pwm2! drop white ;
+: white-run  ( n -- )
+    0 frame-delay !
+    1000 pwm1! 1000 pwm2! drop white ;
 
 here
 ' white-logo ' white-run swap , , -1 ,  \ manual first app-entry
@@ -70,6 +74,7 @@ constant first-app
 
 \ main app scheduler
 0 variable current-app
+0 variable demo-countdown
 
 : next-app ( -- )
     current-app @ 1+
@@ -83,6 +88,21 @@ constant first-app
     else
         apps# 1-
     then current-app ! ;
+
+: apper-demoswitch ( -- )
+    demo @ 0= if exit then
+
+    \ switch app on demo-countdown
+    demo-countdown @ dup 0= if
+        next-app    \ switch app
+        cr ." NEXT APP!"
+        drop demo @ \ reset counter
+    else
+        1-
+        frame-delay @ 0= if \ skip static (=white) app(s)
+            next-app
+        then
+    then demo-countdown ! ;
 
 : apper ( -- )
     \ run
@@ -108,6 +128,8 @@ constant first-app
         else
             us
         then
+
+        apper-demoswitch
 
         key? or
     until $000001 leds n-leds drop ;

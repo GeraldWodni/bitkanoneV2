@@ -35,7 +35,6 @@ compiletoflash
             drop 0
         then
         scanner-x !
-        cr .s
     else
         $1 and if
             decay-grid

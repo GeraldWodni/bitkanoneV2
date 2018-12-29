@@ -2,4 +2,6 @@
 #include apps/scanner.fs
 #include apps/glitter.fs
 
+: init apper ;
+
 apper
