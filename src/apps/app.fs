@@ -9,7 +9,7 @@ compiletoflash
 \ 8: previous-app
 
 0 variable last-app
-20 variable frame-delay
+20000 variable frame-delay
 
 \ create new app
 : create-app ( xt-logo xt-run -- )
@@ -92,7 +92,13 @@ compiletoflash
             1+
         swap
         flush
-        frame-delay @ ms   \ frame delay
+
+        \ frame delay
+        frame-delay @ dup 20000 >= if
+            1000 / ms
+        else
+            us
+        then
 
         key? or
     until $000001 leds n-leds drop ;

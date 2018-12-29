@@ -9,6 +9,8 @@
 #include ws2812b.fs
 #include strobe.fs
 #include xy.fs
+#include random.fs
+#include color-functions.fs
 #include i2c-sw.fs
 #include mpu.fs
 \ #include test.fs

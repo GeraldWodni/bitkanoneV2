@@ -47,6 +47,6 @@ compiletoflash
 : 1ms ( -- ) TIM2 TIMx_CNT @ 1000 + 20000 mod begin TIM2 TIMx_CNT @ over = until drop ;
 
 \ delay for n ms
-: ms ( n -- ) 0 do 1ms loop ;
+: ms ( n -- ) 0 ?do 1ms loop ;
 
 init-pwm
