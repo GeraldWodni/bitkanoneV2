@@ -27,6 +27,15 @@ compiletoflash
         $FFFF0000 or
     then ;
 
+\ sign extend 8 to 32 bit
+: sign-c ( u1 -- n1 )
+    dup $80 and if
+        $FFFFFF00 or
+    then ;
+
+: 0<= ( n -- f )
+    dup 0= swap 0< or ;
+
 : between ( n-val n-min n-max-1 -- f )
 	>r over <=
 	swap r> < and ;
