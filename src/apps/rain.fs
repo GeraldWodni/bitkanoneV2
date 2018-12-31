@@ -15,9 +15,6 @@ cols buffer: drops
         xy!
     loop ;
 
-: 0<= ( n -- f )
-    dup 0= swap 0< or ;
-
 \ convert +/-16384 to $0-$600
 : angle>hue ( n -- u )
     $4000 + $15 / ;
