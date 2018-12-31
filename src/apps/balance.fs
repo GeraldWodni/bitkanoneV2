@@ -46,13 +46,15 @@ compiletoflash
     50 frame-delay !
     drop 
 
-    decay-grid
+    buffer-off
 
     mpu-read drop
     mpu-xy@ negate swap negate swap
     $080008 swap
+    ['] bis! led-n!-xt !    \ set store to 'or' ^= bis!
     x cols angle>u h-line
     $000800 swap
-    y rows angle>u v-line ;
+    y rows angle>u v-line
+    ['] ! led-n!-xt !  ;
 
 ' balance-logo ' balance-run create-app

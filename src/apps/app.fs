@@ -10,7 +10,7 @@ compiletoflash
 
 20000 variable frame-delay
 \ TODO: replace demo countdown by real timer!
-10000 variable demo \ switch to 0 for manual control
+0 variable demo \ switch to 10000 for automatic / 0 for manual control
 
 \ register simple white app
 : white-logo ( -- )        red   ;

@@ -30,8 +30,10 @@ led-buffer-size buffer: led-buffer
 : led-n ( n-index -- a-addr )
 	4 * led-buffer + ;
 
+' ! variable led-n!-xt
+
 : led-n! ( x-color n-index -- )
-	led-n ! ;
+	led-n led-n!-xt @ execute ;
 
 : led-xy ( n-x n-y -- index )
 	cols * + ;
