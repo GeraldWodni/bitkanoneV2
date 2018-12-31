@@ -44,7 +44,7 @@ led-buffer-size buffer: led-buffer
 	and if			\ only draw in buffer region
 		led-xy led-n!
 	else
-		2drop
+		2drop drop
 	then ;
 
 : xy@ ( n-x n-y -- x-color )
