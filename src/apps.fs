@@ -6,6 +6,6 @@
 #include apps/balance.fs
 #include apps/rain.fs
 
-: init apper ;
+: init init apper ;
 
 apper

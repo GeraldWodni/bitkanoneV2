@@ -10,7 +10,7 @@ FORTHFONTDIR="${DIR}/../src/fonts/"
 # create fonts
 for FILE in `ls -1 ${FONTDIR}`; do
     FONTFILE="${FONTDIR}${FILE}"
-    FORTHFILE="${FORTHFONTDIR}${FILE}"
+    FORTHFILE="${FORTHFONTDIR}${FILE/.gif/.fs}"
     #echo "${FONTFILE} -> ${FORTHFILE}"
     ${CREATEFONT} font ${FONTFILE} ${FORTHFILE}
 done
