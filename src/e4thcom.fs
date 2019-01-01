@@ -2,6 +2,7 @@
 \ (c)copyright 2018 by Gerald Wodni <gerald.wodni@gmail.com>
 
 #include registers.fs
+#include fonts/fonts.fs
 #include standard.fs
 #include gpio.fs
 #include pwm.fs
