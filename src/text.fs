@@ -29,23 +29,10 @@ cols variable max-column 	\ stop printing at this column
 : c-pos ( u-char -- )
     font @ swap $7F and $20 - 0 ?do dup c@ 1+ + loop ;
 
-: d-column drop ;
-
 : offset-column ( n-offset n-column )
-    dup d-column cur-column ! col-offset ! ;
+    cur-column ! col-offset ! ;
 : column ( n-column -- )
     0 swap offset-column ;
-
-\ expand lower nibble across byte
-: stretch ( x -- x )
-    0 4 0 do
-        2 lshift
-    over $08 and
-    if
-        $03 or
-    then
-    swap 1 lshift swap
-    loop nip ;
 
 : >d 
     led-buffer cur-column @ 4 * +
@@ -71,11 +58,17 @@ cols variable max-column 	\ stop printing at this column
 
 \ emit single byte and respect column-offset
 : d-emit-off ( x-char -- )
-    col-offset @ 0= if 	\ don't print negative offsets
+    col-offset @ 0= if 	\ don't print offsets
         d-emit-max
     else
-        -1 col-offset +!
-        drop
+        col-offset @ dup 0< if  \ negative offset: shift ahead
+            abs cur-column !
+            0 col-offset !
+            d-emit-max
+        else    \ positive offset: skip column
+            1- col-offset !
+            drop
+        then
     then ;
 
 \ emit pattern n-times
@@ -94,12 +87,11 @@ cols variable max-column 	\ stop printing at this column
 
 
 \ : d-emit dup ." EMIT:  " emit cr d-emit ;
-
-: d-type ( c-addr u -- )
+: d-type ( c-addr n -- )
     \ str-bounds ?do i c@ d-emit loop ;
     bounds ?do i c@ d-emit loop ;
 
-: d-length ( c-addr -- n-len )
+: d-length ( c-addr n -- n-len )
     \ 0 swap str-bounds
     0 -rot bounds
     ?do
@@ -116,11 +108,10 @@ cols variable max-column 	\ stop printing at this column
 
 : clear
     buffer-off
-    off
     0 cur-column ! ;
 
-: >scroll ( c-addr -- )
-    2dup d-length 1+ 0 do
+: >scroll ( c-addr n -- )
+    2dup d-length 1+ cols negate do
         i 0 offset-column
         clear
         2dup d-type flush
@@ -130,7 +121,7 @@ cols variable max-column 	\ stop printing at this column
 : scroll( [char] ) parse >scroll immediate ;
 
 : test-text
-    s"    Hi there can anybody read this?" >scroll ;
+    s" Hi there can anybody read this?" >scroll ;
 
 init-mpu
 clear
