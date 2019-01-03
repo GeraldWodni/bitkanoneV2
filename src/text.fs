@@ -1,18 +1,15 @@
 \ High-Level Display interface: Fonts & Images
 \ (c)copyright 2014, 2019 by Gerald Wodni <gerald.wodni@gmail.com>
 
-\ raw \ clear all until ws2812
-
-
-
 compiletoflash
 
 $000400 variable text-color
 \ TODO: cvariable would be sufficient
-cols variable max-column 	\ stop printing at this column
-  0 variable cur-column 		\ current column
-  0 variable col-offset 		\ column offset
-  1 variable boldness 		\ times to repeat pattern
+cols variable max-column    \ stop printing at this column
+  0 variable cur-column     \ current column
+  0 variable col-offset     \ column offset
+  0 variable row-shift      \ "cursive" scroll adaption
+  1 variable boldness       \ times to repeat pattern
 7px-sans variable font
 
 0 variable cur-text
@@ -34,17 +31,22 @@ cols variable max-column 	\ stop printing at this column
 : column ( n-column -- )
     0 swap offset-column ;
 
-: >d 
-    led-buffer cur-column @ 4 * +
-    row-size rows 1- * +
+: >d ( x-char -- )
+    cur-column @
     8 0 do
-        \ i . 2dup swap hex. hex. cr
-        over $01 and if 		\ bit lit?
-            text-color @ over !
+        over $01 and if \ bit lit?
+            \ x-char n-col --
+            text-color @ over
+
+            i row-shift @ < if
+                1+
+            then
+
+            rows i - 1- \ text is stored LSB bottom
+            xy!
         then
 
-        row-size -
-        swap 1 rshift swap 	\ next bit
+        swap 1 rshift swap \ next bit
     loop 2drop ;
 
 \ emit single byte and respect column-max
@@ -58,7 +60,7 @@ cols variable max-column 	\ stop printing at this column
 
 \ emit single byte and respect column-offset
 : d-emit-off ( x-char -- )
-    col-offset @ 0= if 	\ don't print offsets
+    col-offset @ 0= if \ don't print offsets
         d-emit-max
     else
         col-offset @ dup 0< if  \ negative offset: shift ahead
@@ -108,14 +110,34 @@ cols variable max-column 	\ stop printing at this column
 
 : clear
     buffer-off
+    0 row-shift !
     0 cur-column ! ;
+
+\ straight scroller
+: |-scroller ( c-addr n -- )
+    d-type flush
+    100 ms ;
+
+\ cursive scroller
+: /-scroller ( c-addr n -- )
+    0 7 do
+        buffer-off
+        i row-shift !
+
+        col-offset @ cur-column @ 2>r
+        2dup d-type flush
+
+        2r> offset-column
+        8 ms
+    -1 +loop 2drop ;
+
+' /-scroller variable scroller
 
 : >scroll ( c-addr n -- )
     2dup d-length 1+ cols negate do
         i 0 offset-column
         clear
-        2dup d-type flush
-        100 ms
+        2dup scroller @ execute
     loop 2drop ;
 
 : scroll( [char] ) parse >scroll immediate ;
@@ -123,7 +145,20 @@ cols variable max-column 	\ stop printing at this column
 : test-text
     s" Hi there can anybody read this?" >scroll ;
 
+: row-shift-test
+    clear
+    1 col-offset !
+    4 row-shift !
+    \ TODO: blue, previous ! should be visible
+    $000001 text-color !
+    d" !"
+    $000100 text-color !
+    d" a"
+    $010000 text-color !
+    d" !" flush ;
+
 init-mpu
-clear
-$000100 text-color !
-d( a!)
+row-shift-test
+test-text
+' |-scroller scroller !
+test-text
