@@ -96,6 +96,7 @@ TEMP_H      2 + constant GYRO_XOUT  \ gyrometer X,Y,Z (16bit 2s-complement)
     $80 PWR_MGMT_1 mpu! \ induce reset
     begin
         PWR_MGMT_1 mpu@ $40 =
+        btn@ $04 and or
     until
     
     \ Init sequence by Kris Winer from:

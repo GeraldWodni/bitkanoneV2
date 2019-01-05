@@ -1,4 +1,5 @@
 #include apps/app.fs
+#include apps/ledcheck.fs
 #include apps/scanner.fs
 #include apps/glitter.fs
 #include apps/forth.fs
