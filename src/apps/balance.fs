@@ -41,13 +41,13 @@ compiletoflash
     r> 1- min ;
 
 : balance-logo ( -- )
+    50 frame-delay !
+
     buffer-off
-    $00001F 3 2dup h-line
+    $000004 3 2dup h-line
                    v-line ;
 
 : balance-run ( n -- )
-
-    50 frame-delay !
     drop 
 
     buffer-off

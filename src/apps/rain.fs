@@ -37,14 +37,16 @@ cols buffer: drops
     loop ;
 
 : rain-logo ( -- )
-    buffer-off clear
-    $00000F text-color !
-    d" R" ;
-
-: rain-run ( n -- )
-
     50 frame-delay !
 
+    buffer-off
+    $000001
+    1 5 do
+        dup 3 i xy!
+        1 lshift
+    -1 +loop drop ;
+
+: rain-run ( n -- )
     mpu-read drop
     mpu-xy@ negate angle>hue    \ hue by pan
     swap $4000 + 8 rshift       \ value by tilt

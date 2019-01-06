@@ -7,11 +7,13 @@ $0F0F00 variable fg
 $080808 variable bg
 
 : forth-logo ( -- )
+    50 frame-delay !
     buffer-off clear
-    $1F0000 text-color !
+    $040000 text-color !
+    1 cur-column !
     d" :;" ;
-: forth-run ( n -- )
 
+: forth-run ( n -- )
     1 frame-delay !
 
     \ slowly pan

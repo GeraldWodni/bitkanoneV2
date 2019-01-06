@@ -4,14 +4,14 @@
 compiletoflash
 
 : ledcheck-logo ( -- )
+    10000 frame-delay !
+
     buffer-off
     $040000 2 3 xy!
     $000400 3 3 xy!
     $000004 4 3 xy!  ;
 
 : ledcheck-run ( n -- )
-    10000 frame-delay !
-
     100 mod 0= if
         0 0 xy@ case
             $010000 of $000100 endof    \ red -> green

@@ -6,13 +6,17 @@ compiletoflash
 $FFAF3F variable glitter-color
 
 : glitter-logo ( -- )
-    buffer-off clear
-    $1F0000 text-color !
-    d" gl" ;
+    50 frame-delay !
+    11 c-seed ! \ same seed so logo stays static
+
+    buffer-off
+    8 0 do
+        $040404 random-xy xy!
+        $040200 random-xy xy!
+        $040000 random-xy xy!
+    loop ;
 
 : glitter-run ( n -- )
-    50 frame-delay !
-
     \ slowly dive up
     dup 5000 mod dup 10 / 300 + pwm2!
     0= if

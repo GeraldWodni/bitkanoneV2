@@ -78,13 +78,16 @@ $060006 constant wcolor
             endcase ;
 
 : wurmi-logo ( -- )
-    buffer-off clear
-    $000400 text-color !
-    d" w" ;
-
-: wurmi-run ( n -- )
     3000 frame-delay !
 
+    buffer-off
+    4 1 do
+        $040004 i 3 xy!
+    loop
+    $040004 1 2 xy!
+    $000400 5 3 xy! ;
+
+: wurmi-run ( n -- )
     mpu-read drop
     mpu-xy@
     dup        balance        > if drop drop 2

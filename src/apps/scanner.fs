@@ -12,12 +12,18 @@ compiletoflash
 
 0 variable scanner-x
 : scanner-logo
-    buffer-off clear
-    $0F0000 text-color !
-    d" S" ;
+    1000 frame-delay !
+
+    buffer-off
+    $010000
+    1 5 do
+        5 2 do
+            dup j i xy!
+        loop
+        1 lshift
+    -1 +loop drop ;
 
 : scanner-run ( n -- )
-    1000 frame-delay !
     700 pwm2!
     \ movement
     dup 2000 mod

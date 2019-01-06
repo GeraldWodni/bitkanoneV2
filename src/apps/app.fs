@@ -14,7 +14,14 @@ compiletoflash
 0 variable demo \ switch to 10000 for automatic / 0 for manual control
 
 \ register simple white app
-: white-logo ( -- )        $1F0000 buffer!   ;
+: white-logo ( -- )
+    buffer-off
+    5 2 do
+        5 2 do
+            $040404 i j xy!
+        loop
+    loop ;
+
 : white-run  ( n -- )
     0 frame-delay !
     1000 pwm1! 1000 pwm2! drop white ;
