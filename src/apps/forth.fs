@@ -6,7 +6,10 @@ compiletoflash
 $0F0F00 variable fg
 $080808 variable bg
 
-: forth-logo ( -- ) ;
+: forth-logo ( -- )
+    buffer-off clear
+    $1F0000 text-color !
+    d" :;" ;
 : forth-run ( n -- )
 
     1 frame-delay !

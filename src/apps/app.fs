@@ -13,7 +13,7 @@ compiletoflash
 0 variable demo \ switch to 10000 for automatic / 0 for manual control
 
 \ register simple white app
-: white-logo ( -- )        red   ;
+: white-logo ( -- )        $1F0000 buffer!   ;
 : white-run  ( n -- )
     0 frame-delay !
     1000 pwm1! 1000 pwm2! drop white ;
@@ -110,7 +110,8 @@ constant first-app
     0 \ free running step counter
     begin
         dup \ get free running counter
-        current-app @ app-n cell+ @ execute
+        drop
+        current-app @ app-n ( cell+ ) @ execute
         buttons-once@ case
             $1 of           true endof
             $2 of prev-app false endof

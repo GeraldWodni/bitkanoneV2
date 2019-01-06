@@ -3,7 +3,12 @@
 
 compiletoflash
 
-: ledcheck-logo ( -- ) ;
+: ledcheck-logo ( -- )
+    buffer-off
+    $040000 2 3 xy!
+    $000400 3 3 xy!
+    $000004 4 3 xy!  ;
+
 : ledcheck-run ( n -- )
     10000 frame-delay !
 

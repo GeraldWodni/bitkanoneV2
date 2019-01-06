@@ -11,7 +11,11 @@ compiletoflash
     loop 2drop ;
 
 0 variable scanner-x
-: scanner-logo cyan ;
+: scanner-logo
+    buffer-off clear
+    $0F0000 text-color !
+    d" S" ;
+
 : scanner-run ( n -- )
     1000 frame-delay !
     700 pwm2!

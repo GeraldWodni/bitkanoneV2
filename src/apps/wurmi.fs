@@ -77,7 +77,11 @@ $060006 constant wcolor
               drop
             endcase ;
 
-: wurmi-logo ( -- ) ;
+: wurmi-logo ( -- )
+    buffer-off clear
+    $000400 text-color !
+    d" w" ;
+
 : wurmi-run ( n -- )
     3000 frame-delay !
 

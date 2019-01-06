@@ -5,7 +5,11 @@ compiletoflash
 
 $FFAF3F variable glitter-color
 
-: glitter-logo ( -- ) ;
+: glitter-logo ( -- )
+    buffer-off clear
+    $1F0000 text-color !
+    d" gl" ;
+
 : glitter-run ( n -- )
     50 frame-delay !
 

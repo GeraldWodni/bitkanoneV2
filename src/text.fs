@@ -162,3 +162,5 @@ row-shift-test
 test-text
 ' |-scroller scroller !
 test-text
+
+cornerstone tcold

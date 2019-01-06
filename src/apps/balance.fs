@@ -40,7 +40,11 @@ compiletoflash
     0 max       \ bind value
     r> 1- min ;
 
-: balance-logo ( -- ) ;
+: balance-logo ( -- )
+    buffer-off
+    $00001F 3 2dup h-line
+                   v-line ;
+
 : balance-run ( n -- )
 
     50 frame-delay !

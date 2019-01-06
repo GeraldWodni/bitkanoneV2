@@ -36,7 +36,11 @@ cols buffer: drops
         i c@ hex.
     loop ;
 
-: rain-logo ( -- ) ;
+: rain-logo ( -- )
+    buffer-off clear
+    $00000F text-color !
+    d" R" ;
+
 : rain-run ( n -- )
 
     50 frame-delay !

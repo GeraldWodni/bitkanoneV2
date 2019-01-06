@@ -14,4 +14,5 @@
 #include color-functions.fs
 #include i2c-sw.fs
 #include mpu.fs
+#include text.fs
 \ #include test.fs
