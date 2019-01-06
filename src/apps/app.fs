@@ -8,6 +8,7 @@ compiletoflash
 \ 4: xt-run
 \ 8: next-app
 
+0 variable app-running
 20000 variable frame-delay
 \ TODO: replace demo countdown by real timer!
 0 variable demo \ switch to 10000 for automatic / 0 for manual control
@@ -95,7 +96,7 @@ constant first-app
     \ switch app on demo-countdown
     demo-countdown @ dup 0= if
         next-app    \ switch app
-        cr ." NEXT APP!"
+        cr ." Demo: next app!"
         drop demo @ \ reset counter
     else
         1-
@@ -104,24 +105,45 @@ constant first-app
         then
     then demo-countdown ! ;
 
+\ app executor and switcher ("jump too far" if put in apper)
+: apper-main ( n1 -- n1 )
+    app-running @ if
+        dup \ get free running counter
+        current-app @ app-n cell+ @ execute
+
+        buttons@ $7 = if    \ change to app-switcher
+            $7 last-buttons !
+            0 app-running !
+        then
+    else
+        current-app @ app-n @ execute
+
+        buttons-once@ case
+            $1 of -1 app-running ! endof    \ run selected app
+            $2 of prev-app endof            \ select app
+            $4 of next-app endof
+        endcase
+    then ;
+
+\ main word
 : apper ( -- )
     \ run
     init-mpu
+
+    \ skip apper
+    buttons@ $02 and if
+        buffer-off
+        $070000 0 0 xy! flush
+        exit
+    then
+
     0 \ free running step counter
     begin
-        dup \ get free running counter
-        drop
-        current-app @ app-n ( cell+ ) @ execute
-        buttons-once@ case
-            $1 of           true endof
-            $2 of prev-app false endof
-            $4 of next-app false endof
-            false swap
-        endcase
-        swap \ free running counter
-            1+
-        swap
-        flush
+        apper-main
+
+        flush   \ show our beautiful buffer
+
+        1+ \ free running counter
 
         \ frame delay
         frame-delay @ dup 20000 >= if
@@ -132,8 +154,8 @@ constant first-app
 
         apper-demoswitch
 
-        key? or
-    until $000001 leds n-leds drop ;
+        key?
+    until $000001 leds n-leds ;
 
 \ info: an app gets a free running counter topping at leds²-1
 \ frame time: ~20ms ^= 50Hz/frames
