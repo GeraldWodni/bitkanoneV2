@@ -30,6 +30,19 @@ here
 ' white-logo ' white-run swap , , -1 ,  \ manual first app-entry
 constant first-app
 
+\ human detected graphics
+: human-io ( -- )
+    buffer-off
+    3 0 do
+        \ up arrow
+        $000400 dup i     i 4 + xy! \ up
+                    i 2 + 6 i - xy! \ down
+
+        \ down arrow
+        $040000 dup i 2 + 2 i - xy! \ down
+                    i 4 +   i   xy! \ up
+    loop ;
+
 \ get pointer to last app
 : last-app ( -- addr )
     first-app
@@ -162,7 +175,7 @@ constant first-app
         apper-demoswitch
 
         key?
-    until $000001 leds n-leds ;
+    until human-io flush ;
 
 \ info: an app gets a free running counter topping at leds²-1
 \ frame time: ~20ms ^= 50Hz/frames
