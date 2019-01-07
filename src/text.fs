@@ -157,10 +157,10 @@ cols variable max-column    \ stop printing at this column
     $010000 text-color !
     d" !" flush ;
 
+cornerstone tcold
+
 init-mpu
 row-shift-test
 test-text
 ' |-scroller scroller !
 test-text
-
-cornerstone tcold
