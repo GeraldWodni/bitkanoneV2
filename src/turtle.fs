@@ -35,12 +35,11 @@ $000707 variable tcolor
 \     Pixel (x, y) einfärben
 
 : line ( x y -- )
-    2>r
-    2r@  ty @ - swap tx @ - ( dy dx )
+    over >r \ save x
+    ty @ - swap tx @ - ( dy dx )
     over   2* -rot ( do dy dx )
     2dup - 2* -rot ( do dno dy dx )
     swap 2* swap - ( do dno d )
-    ~~
 
     (point) \ draw starting point
 
@@ -54,10 +53,9 @@ $000707 variable tcolor
         then
 
         (point)         \ draw new point
-    2r@ drop tx @ = until
+    r@ tx @ = until
 
-    drop 2drop
-
-    2r> 2drop ;
+    drop 2drop          \ clean do dno and d
+    r> drop ;           \ clear xe
 
 $000707 tcolor !
