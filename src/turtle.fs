@@ -7,15 +7,18 @@
 0 variable ty
 $000707 variable tcolor
 
+\ move turtle
 : goto ( x y -- )
     ty ! tx ! ;
 
+\ set turtle color
 : color! ( x-color -- )
     tcolor ! ;
 
 : (point) ( -- )
     tcolor @ tx @ ty @ xy! ;
 
+\ draw point at xy
 : point ( x y -- )
     goto (point) ;
 
@@ -34,7 +37,10 @@ $000707 variable tcolor
 \         y = y + 1
 \     Pixel (x, y) einfärben
 
-: line ( x y -- )
+0 variable (line)-raise
+
+\ bresenham line code (only for 1st quadrant, and dx >= dy)
+: (line) ( x y -- )
     over >r \ save x
     ty @ - swap tx @ - ( dy dx )
     over   2* -rot ( do dy dx )
@@ -49,7 +55,7 @@ $000707 variable tcolor
             2 pick +    \ d = d + do
         else            \ otherwise raise
             over +      \ d = d + dno
-            1 ty +! 
+            (line)-raise @ execute  \ perform y++ or alike
         then
 
         (point)         \ draw new point
@@ -57,5 +63,12 @@ $000707 variable tcolor
 
     drop 2drop          \ clean do dno and d
     r> drop ;           \ clear xe
+
+: ty1+ ( -- )
+    1 ty +! ;
+
+: line ( x y -- )
+    ['] ty1+ (line)-raise !
+    (line) ;
 
 $000707 tcolor !
