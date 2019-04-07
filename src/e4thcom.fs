@@ -15,5 +15,5 @@
 #include i2c-sw.fs
 #include mpu.fs
 #include text.fs
-\ #include test.fs
-#include apps.fs
+#include test-nompu.fs
+\ #include apps.fs
