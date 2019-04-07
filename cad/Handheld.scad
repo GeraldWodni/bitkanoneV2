@@ -5,14 +5,14 @@
 Columns = 7;
 PlateWidth = 98;
 LedDistance = PlateWidth/Columns;
-Wall = 3;
-Bottom = 2;
+Wall = 2;
+Bottom = 0.8;
 
 Height = 13+Bottom;
 
 /* Wall cutouts */
 InterConnectHeight = 3;
-InterConnectWidth = 13;
+InterConnectWidth = 13.4;
 
 /* helpers */
 E = 0.01;
@@ -39,7 +39,7 @@ NutBase = 2;
 /* reset-button */
 /* button = printed; switch = mechanical */
 ButtonDiameter = 5;
-ButtonTop = Bottom;
+ButtonTop = Bottom+0.5;
 ButtonSpacing = 0.2;
 ResetX = 63;
 ResetY = 45.5;
@@ -119,4 +119,30 @@ module body() {
     }
 }
 
+BendCompensation = 0.5;
+PCBTop = 4.5;
+PillarHeight = Height - Bottom - PCBTop;
+module button() {
+    baseHeight = PillarHeight - SwitchBase - BendCompensation;
+    cutoutHeight = SwitchHeight-SwitchBase;
+
+    difference() {
+        union() {
+            /* top */
+            translate([0, 0, baseHeight])
+            cylinder( d = ButtonTopDiameter, h = ButtonTop + BendCompensation );
+
+            /* base */
+            baseWidth = SwitchWidth + ButtonWall*2;
+            baseDepth = SwitchDepth + ButtonWall*2;
+            translate([-baseWidth/2, -baseDepth/2])
+            cube([baseWidth, baseDepth, baseHeight]);
+        }
+
+        translate([-SwitchWidth/2, -SwitchDepth/2, -E])
+        cube([SwitchWidth, SwitchDepth, cutoutHeight+E]);
+    }
+}
+
+//button();
 body();
