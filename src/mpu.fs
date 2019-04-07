@@ -109,4 +109,4 @@ TEMP_H      2 + constant GYRO_XOUT  \ gyrometer X,Y,Z (16bit 2s-complement)
 
 cornerstone mcold
 
-init-mpu
+\ init-mpu

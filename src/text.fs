@@ -159,8 +159,8 @@ cols variable max-column    \ stop printing at this column
 
 cornerstone tcold
 
-init-mpu
-row-shift-test
-test-text
-' |-scroller scroller !
-test-text
+\ init-mpu
+\ row-shift-test
+\ test-text
+\ ' |-scroller scroller !
+\ test-text

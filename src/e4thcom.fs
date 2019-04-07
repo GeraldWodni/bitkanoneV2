@@ -16,3 +16,4 @@
 #include mpu.fs
 #include text.fs
 \ #include test.fs
+#include apps.fs
