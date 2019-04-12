@@ -1,5 +1,5 @@
-#!/usr/bin/python
-# (c) copyright 2011 by Gerald Wodni
+#!/usr/bin/python3
+# (c) copyright 2011, 2019 by Gerald Wodni
 
 import sys
 from PIL import Image
@@ -72,7 +72,7 @@ class FontTransformer( Transformer ):
 			if y + 1 >= self.height:
 				break
 
-			print ">>>>>>>>>>>>>>>>>>>>===", chr(a), "==="
+			print(">>>>>>>>>>>>>>>>>>>>===", chr(a), "===")
 			
 			self.processLetterLine( y, a )
 
@@ -97,7 +97,7 @@ class FontTransformer( Transformer ):
 			if i >= 16:
 				break
 
-			print "===", chr(a), "==="
+			print("===", chr(a), "===")
 			
 			x += self.processLetter( x, y, a )
 			x += 1
@@ -154,7 +154,7 @@ class FontTransformer( Transformer ):
 		return value
 
 def usage():
-	print "usage: ", sys.argv[0], "{image|font} <image-file> <output-file>"
+	print("usage: ", sys.argv[0], "{image|font} <image-file> <output-file>")
 			
 
 if __name__ == "__main__":
