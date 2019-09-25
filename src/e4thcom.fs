@@ -12,6 +12,8 @@
 #include xy.fs
 #include random.fs
 #include color-functions.fs
+#include transformations.fs
+#include turtle.fs
 #include i2c-sw.fs
 #include mpu.fs
 #include text.fs
