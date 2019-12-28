@@ -108,6 +108,14 @@ cols variable max-column    \ stop printing at this column
 
 : d" postpone s" postpone d-type immediate ;
 
+: dc-type ( c-addr n )
+    2dup d-length 2/ cols 2/ swap - cur-column ! \ center cur-column
+    d-type ;
+
+\ centered varriants of d( and d"
+: dc( [char] ) parse dc-type flush immediate ;
+: dc" postpone s" postpone dc-type immediate ;
+
 : clear
     buffer-off
     0 row-shift !
