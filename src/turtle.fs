@@ -48,7 +48,7 @@ $000707 variable tcolor
 : (line-shallow) ( dx dy err1 -- dx dy err2 )
     over - \ dx dy err-dy
     dup 0< if
-        3 pick + \ dx dy err-dy+dx
+        2 pick + \ dx dy err-dy+dx
         sx @ tx +!
         sy @ ty +!
     else
@@ -57,7 +57,7 @@ $000707 variable tcolor
 
 \ line in 2nd octant
 : (line-steep) ( dx dy err1 -- dx dy err2 )
-    3 pick - \ dx dy err-dx
+    2 pick - \ dx dy err-dx
     dup 0< if
         over + \ dx dy err-dx+dy
         sy @ ty +!
