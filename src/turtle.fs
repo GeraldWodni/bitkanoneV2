@@ -93,7 +93,6 @@ $000707 variable tcolor
     drop 2drop 2drop ;
 
 : line+ ( dx dy -- )
-    ty + swap
-    tx + swap
+    ty @ + swap
+    tx @ + swap
     line ;
-
