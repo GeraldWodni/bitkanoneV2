@@ -96,3 +96,19 @@ $000707 variable tcolor
     ty @ + swap
     tx @ + swap
     line ;
+
+0 variable fcolor \ fill color
+: (fill) ( x y -- )
+    >xy<? 0= if 2drop exit then
+    2dup xy@ fcolor @ <> if 2drop exit then
+    2dup point
+    2dup 1- recurse \ x-
+    2dup 1+ recurse \ x+
+    2dup swap 1- swap recurse \ y-
+         swap 1+ swap recurse \ y+
+    ;
+
+: fill ( x y -- )
+    2dup xy@ fcolor !
+    goto
+    tx @ ty @ (fill) ;
