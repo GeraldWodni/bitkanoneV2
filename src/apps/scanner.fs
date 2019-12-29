@@ -62,4 +62,4 @@ compiletoflash
         then
     then ;
 
-' scanner-logo ' scanner-run create-app
+' scanner-logo ' scanner-run 1 create-app

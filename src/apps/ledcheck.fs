@@ -21,4 +21,4 @@ compiletoflash
         flush
     then ;
 
-' ledcheck-logo ' ledcheck-run create-app
+' ledcheck-logo ' ledcheck-run 0 create-app

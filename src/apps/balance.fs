@@ -61,4 +61,4 @@ compiletoflash
     y rows angle>u v-line
     ['] ! led-n!-xt !  ;
 
-' balance-logo ' balance-run create-app
+' balance-logo ' balance-run 0 create-app

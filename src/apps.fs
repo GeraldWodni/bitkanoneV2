@@ -7,6 +7,7 @@
 #include apps/wurmi.fs
 #include apps/balance.fs
 #include apps/rain.fs
+#include apps/c3.fs
 
 : init init apper ;
 

@@ -47,6 +47,14 @@ cols buffer: drops
     -1 +loop drop ;
 
 : rain-run ( n -- )
+    1000 pwm1!
+    \ movement
+    dup 2000 mod
+    dup 1000 > if
+        2000 swap -
+    then
+    2/ 500 + pwm2!
+
     mpu-read drop
     mpu-xy@ negate angle>hue    \ hue by pan
     swap $4000 + 8 rshift       \ value by tilt
@@ -60,4 +68,4 @@ cols buffer: drops
         decay-grid
     then ;
 
-' rain-logo ' rain-run create-app
+' rain-logo ' rain-run 1 create-app

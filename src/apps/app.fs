@@ -8,10 +8,12 @@ compiletoflash
 \ 4: xt-run
 \ 8: next-app
 
-0 variable app-running
+\ TODO: switch to demo mode after no selction for x seconds
+\ TODO: abort demo mode on button press
+-1 variable app-running \ set to -1 for demo
 20000 variable frame-delay
 \ TODO: replace demo countdown by real timer!
-0 variable demo \ switch to 10000 for automatic / 0 for manual control
+10000 variable demo \ switch to 10000 for automatic / 0 for manual control
 
 \ register simple white app
 : white-logo ( -- )
@@ -54,10 +56,12 @@ constant first-app
     repeat ;
 
 \ create new app
-: create-app ( xt-logo xt-run -- )
-    cr ." CREATE:" 2dup swap hex. hex.
+: create-app ( xt-logo xt-run flags -- )
+    >r \ save flags
+    cr ." CREATE:" 2dup swap hex. hex. r@ hex.
     here last-app 2 cells + flash! \ update previous next-app pointer
     swap , , -1 ,   \ create new app and leave next field empty
+    r> , \ save flags after next field
     ; \ set current app as last
 
 \ print app xt and return previous app
@@ -115,8 +119,12 @@ constant first-app
 
     \ switch app on demo-countdown
     demo-countdown @ dup 0= if
-        next-app    \ switch app
-        cr ." Demo: next app!"
+        begin
+            next-app    \ switch app
+            cr ." Demo: next app!" current-app @ .
+            current-app @ app-n 3 cells + @ 1 and
+        until
+        current-app @ app-n @ execute \ execute logo (to init)
         drop demo @ \ reset counter
     else
         1-

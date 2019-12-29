@@ -186,4 +186,4 @@ create numbs
     2drop
     ;
 
-' wurmi-logo ' wurmi-run create-app
+' wurmi-logo ' wurmi-run 0 create-app

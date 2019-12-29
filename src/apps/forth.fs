@@ -17,8 +17,8 @@ $080808 variable bg
     1 frame-delay !
 
     \ slowly pan
-    \ dup 5000 mod 10 / 300 + pwm1!
-    \ 300 pwm2!
+    dup 5000 mod 10 / 300 + pwm1!
+    300 pwm2!
 
     \ background
     \ $0F0000 buffer!
@@ -52,4 +52,4 @@ $080808 variable bg
         5 5 xy!
     ;
 
-' forth-logo ' forth-run create-app
+' forth-logo ' forth-run 1 create-app

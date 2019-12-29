@@ -31,4 +31,4 @@ $FFAF3F variable glitter-color
     \ decay
     decay-grid ;
 
-' glitter-logo ' glitter-run create-app
+' glitter-logo ' glitter-run 1 create-app
